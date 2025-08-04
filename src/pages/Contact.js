@@ -38,6 +38,15 @@ function Contact() {
                         <p>+123123123</p>
                     </div>
                 </div>
+                <div className="vertical-card">
+                    <div className="card-text">
+                        <h3>Someone 4</h3>
+                        <h3>Email:</h3>
+                        <p>someone4@anchorsteel.com.au</p>
+                        <h3>Phone:</h3>
+                        <p>+123123123</p>
+                    </div>
+                </div>
             </div>
         </div>
     );

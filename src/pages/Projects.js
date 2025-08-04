@@ -1,7 +1,8 @@
 
 import React, {useState} from 'react';
 import '../App.css';
-import placeholderimg from '../assets/placeholder.jpg'
+import { Link } from 'react-router-dom';
+import anchorsteellogo from '../assets/anchorsteellogo.png'
 
 function Projects() {
     const [activeCard, setActiveCard] = useState(null);
@@ -11,21 +12,23 @@ function Projects() {
     // Just add projects as you go. Make sure to ask for the photos of them.
     const projectData = [
     {
-        title: "Westfield shopping center",
-        desc: "This obviously isn't Westfield, bru.",
-        img: placeholderimg,
-        details: "Detailed info about this project, tools used, etc."
+        title: "Coming Soon!",
+        desc: "Contact us for more information :)",
+        img: anchorsteellogo,
+        details: "Placeholder text.",
+        link:"/projects/testproject"
     },
     {
-        title: "Another cool project",
-        desc: "This one's legit.",
-        img: placeholderimg,
-        details: "Expanded content for the second project."
+        title: "Coming Soon!",
+        desc: "Contact us for more information :)",
+        img: anchorsteellogo,
+        details: "Placeholder text.",
+        link:"/projects/testprojecttwo"
     },
     {
-        title: "Project 3",
-        desc: "Small description here.",
-        img: placeholderimg,
+        title: "Coming Soon!",
+        desc: "Contact us for more information :)",
+        img: anchorsteellogo,
         details: "Placeholder text."
     }
     ];
@@ -50,6 +53,7 @@ function Projects() {
                     {activeCard === i && (
                         <div className="card-details">
                         <p>{project.details}</p>
+                        <Link to={project.link} className="view-more-link">View More</Link>
                         </div>
                     )}
                     </div>
