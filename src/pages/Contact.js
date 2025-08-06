@@ -7,7 +7,7 @@ function Contact() {
             <header className="main-header">
                 <h1>Contact Us!</h1>
                 <p>This website is currently under development. 
-                    While some sections are still being finalized, all essential contact information is available below. 
+                    While the details are still being finalized, all essential contact information is available below. 
                     If you have any questions or need assistance, feel free to reach out — we’d be happy to help.</p>
             </header>
             <div className="grid">
