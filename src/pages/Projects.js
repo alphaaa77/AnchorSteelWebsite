@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
+import '../components/Projects.css';
 import { Link } from 'react-router-dom';
-import anchorsteellogo from '../assets/anchorsteellogo.png';
-import placeholderimage from '../assets/placeholder.jpg';
 import photo1 from '../assets/testproject/photo1.jpg';
 import photo2 from '../assets/testproject/photo2.jpg';
 import photo3 from '../assets/testproject/photo3.jpg';
@@ -27,7 +26,7 @@ function Projects() {
     },
     {
       title: 'Project B',
-      desc: 'More info coming soon!',
+      desc: 'More info coming soon!!!!',
       img: photo2,
       details: 'Placeholder text.',
       link: '/projects/testprojecttwo',
@@ -46,7 +45,7 @@ function Projects() {
     setSlideDirection('right');
     setPrevSlide(currentSlide)
       setCurrentSlide((prev) => (prev + 1) % projectData.length);
-    }, 5000); // 5 seconds
+    }, 3000); // change seconds depending
     return () => clearInterval(interval);
   }, [projectData.length]);
 

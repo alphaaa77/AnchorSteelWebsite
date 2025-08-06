@@ -4,11 +4,13 @@ import '../App.css';
 function Contact() {
     return(
         <div className="section">
-            <header className="main-header">
+            <header className="header">
                 <h1>Contact Us!</h1>
                 <p>This website is currently under development. 
                     While the details are still being finalized, all essential contact information is available below. 
                     If you have any questions or need assistance, feel free to reach out — we’d be happy to help.</p>
+                    <h3>Address:</h3>
+                    <p>46 Williamson Road, Ingleburn</p>
             </header>
             <div className="grid">
                 <div className="vertical-card">

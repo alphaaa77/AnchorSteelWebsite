@@ -6,7 +6,7 @@ import photo1 from '../../assets/anchorsteellogo.png'
 import photo2 from '../../assets/anchorsteellogo.png'
 import photo3 from '../../assets/anchorsteellogo.png'
 function TestProject() {
-    const images = [photo1, photo2, photo3];
+    const images = [photo1, photo2, photo3]; // insert as much images as you need, make sure its all imported 
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const goPrev = () => {

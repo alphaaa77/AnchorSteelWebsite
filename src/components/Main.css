@@ -1,0 +1,95 @@
+/*.main-header{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 0; 
+  margin: 0; 
+  padding: 0px;
+}*/
+.main-header h1{
+  margin-bottom: 20px;
+}
+.main-header p{
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+.main-about {
+  padding: 50px;
+  text-align: center;
+  background-color: #AAF0E9;
+  border-radius: 0px;
+}
+.main-prodserv {
+  padding: 50px;
+  text-align: center;
+  background-color: #AAF0E9;
+  border-radius: 0px;
+}
+.main-projects {
+  padding: 50px;
+  text-align: center;
+  background-color: #AAF0E9;
+  border-radius: 0px;
+}
+.main-contact {
+  padding: 50px;
+  text-align: center;
+  background-color: #AAF0E9;
+  border-radius: 0px;
+}
+.animated-header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-image: url('photo1.jpg'); /* <-- replace with actual path */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomInBackground 7s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes zoomInBackground {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+.header-overlay {
+  position: absolute; /* not relative */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 95%;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  z-index: 2; /* just to be sure it's on top */
+}
+
+.header-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header-overlay p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  color:aliceblue
+}

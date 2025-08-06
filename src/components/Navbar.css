@@ -44,3 +44,16 @@
 .social-icon:hover {
     transform: scale(1.1);
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating-logo {
+  height: 60px;
+  animation: spin 5s linear infinite;
+  object-fit: contain;
+} 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/SS Logo.png';
+import rotatinglogo from '../assets/anchorsteellogo.png';
 import './Navbar.css';
 import facebook from '../assets/facebook.png';
 import linkedin from '../assets/linkedin.png';
@@ -14,7 +15,7 @@ function Navbar() {
             alt="Anchor Steel Logo"
             className="navbar-logo"/>
             </Link>
-
+            <img src={rotatinglogo} alt="Rotating Logo" className="rotating-logo"/>
             <div className="navbar-links">
                <Link to="/about" className="nav-button">About Us</Link>
                <Link to="/contact" className="nav-button">Contact</Link>
