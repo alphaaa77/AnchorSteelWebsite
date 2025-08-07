@@ -19,7 +19,9 @@ function Navbar() {
                 <Link to="/projects" className="nav-button">Projects</Link>
                 <Link to="/products" className="nav-button">Products & Services</Link>
                 </div>
-                <button className="quote-button">Get A Quote</button>
+                <Link to="/getaquote">          
+                    <button className="quote-button">Get A Quote</button>
+                </Link>
             </div>
 
             <div className="navbar-social">

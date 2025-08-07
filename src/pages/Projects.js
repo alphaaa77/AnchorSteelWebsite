@@ -47,7 +47,7 @@ function Projects() {
       setCurrentSlide((prev) => (prev + 1) % projectData.length);
     }, 3000); // change seconds depending
     return () => clearInterval(interval);
-  }, [projectData.length]);
+  }, [currentSlide, projectData.length]);
 
   const handlePrev = () => {
     setSlideDirection('left');

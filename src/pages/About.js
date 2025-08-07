@@ -4,8 +4,8 @@ import '../components/About.css';
 function About() {
     return (
         <div className="section about-us">
-            <header className="animated-header">
-                <div className="header-overlay">
+            <header className="aboutus-animated-header">
+                <div className="aboutus-header-overlay">
                 <h1>About Anchor Steel</h1>
                 <p>Ipsum ut sunt in quis non aliqua proident aliqua ullamco ea.</p>
                 </div>

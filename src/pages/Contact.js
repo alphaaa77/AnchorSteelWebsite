@@ -5,14 +5,11 @@ import placeholder from '../assets/placeholder.jpg';
 function Contact() {
     return(
         <div className="section">
-            <header className="animated-header">
-                <div className="header-overlay">
+            <header className="contact-animated-header">
+                <div className="contact-header-overlay">
                 <h1>Contact Us!</h1>
-                <p>This website is currently under development. 
-                    While the details are still being finalized, all essential contact information is available below. 
-                    If you have any questions or need assistance, feel free to reach out — we’d be happy to help.</p>
                     <h3>Address:</h3>
-                    <p>46 Williamson Road, Ingleburn, 2565, Sydney</p>
+                    <p>46 Williamson Road, Ingleburn, 2565, Sydney, NSW</p>
                 </div>
             </header>
 
@@ -44,7 +41,7 @@ function Contact() {
                             <h3>Address:</h3>
                             <p>46 Williamson Road</p>
                             <p>Ingleburn</p>
-                            <p>Sydney</p>
+                            <p>Sydney, NSW</p>
                         </div>
                     </div>
                 </div>

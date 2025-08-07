@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
 import Projects from './pages/Projects';
+import GetAQuote from './pages/GetAQuote';
 
 import TestProject from '././pages/projects-pages/testproject';
 import TestProjectTwo from '././pages/projects-pages/testprojecttwo';
@@ -26,8 +27,9 @@ function App() {
 
             <Route path="/projects/testproject" element={<TestProject/>}/>
             <Route path="/projects/testprojecttwo" element={<TestProjectTwo/>}/>
-            
+
             <Route path="/products" element={<Products />} />
+            <Route path="/getaquote" element={<GetAQuote/>} />
           </Routes>
         </main>
         <Footer />

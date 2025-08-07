@@ -34,8 +34,7 @@ function Main() {
         <div className = "section-main">
             <header className="animated-header">
             <div className="header-overlay">
-                <h1>Anchor Steel</h1>
-                <p>Built for life.</p>
+                <h1>Built For Life.</h1>
             </div>
             </header>
 
