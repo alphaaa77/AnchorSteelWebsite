@@ -1,0 +1,95 @@
+.about-us {
+  padding: 40px 20px;
+  background-color: #f5fcf9;
+  color: #2C3E50;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Header */
+.about-us header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #7AABC7;
+  text-align: center;
+}
+
+.about-us header p {
+  font-size: 1.2rem;
+  color: #2C3E50;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+/* Section container */
+.about-us section {
+  margin-top: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C8DEB1; /* Lime green divider */
+}
+
+/* Section headers */
+.about-us section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #4B9CBF;
+  border-left: 5px solid #C8DEB1;
+  padding-left: 15px;
+}
+
+/* Paragraphs */
+.about-us section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-top: 10px;
+}
+
+/* Core Values List */
+.about-us .core-values ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.about-us .core-values li {
+  background-color: #e6f9f5;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-left: 5px solid #A2DCE5;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.about-us .core-values li:hover {
+  background-color: #d1f2ea;
+  transform: translateX(5px);
+  cursor: default;
+}
+
+.about-us .core-values li strong {
+  color: #007A7A;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 20px 15px;
+  }
+
+  .about-us header h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-us section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-us section p {
+    font-size: 1rem;
+  }
+}

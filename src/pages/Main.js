@@ -1,30 +1,113 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import '../App.css';
 import '../components/Main.css';
+import photo1 from '../assets/testproject/photo1.jpg';
+import photo2 from '../assets/testproject/photo2.jpg';
+import photo3 from '../assets/testproject/photo3.jpg';
+import placeholder from '../assets/placeholder.jpg';
+import mesh from '../assets/mesh.jpeg';
+import sslogo from '../assets/SS Logo.png';
+
 function Main() {
+    useEffect(() => {
+  const elements = document.querySelectorAll('.scroll-fade-in');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  elements.forEach(el => observer.observe(el));
+}, []);
+
     return (
         <div className = "section-main">
             <header className="animated-header">
             <div className="header-overlay">
-                <h1>Website development on its way!</h1>
-                <p>This website is currently under development. Please see the "Contact" section for any inquiries.</p>
+                <h1>Anchor Steel</h1>
+                <p>Built for life.</p>
             </div>
             </header>
+
+            <div className="logo-banner">
+                <div className="logo-track">
+                    <img src={sslogo} alt="Partner 1" />
+                    <img src={sslogo} alt="Partner 2" />
+                    <img src={sslogo} alt="Partner 3" />
+                    <img src={sslogo} alt="Partner 4" />
+                    <img src={sslogo} alt="Partner 1 duplicate" />
+                    <img src={sslogo} alt="Partner 2 duplicate" />
+                    <img src={sslogo} alt="Partner 3 duplicate" />
+                    <img src={sslogo} alt="Partner 4 duplicate" />
+                </div>
+            </div>
+
             <div className="main-about">
-                <h1>About Us</h1>
-                <p>Section for about us.</p>
+                <div className="about-content">
+                    <div className="about-image scroll-fade-in" id="about-img">
+                        <img src={photo1} alt="Reinforcing steel work" style={{cursor: 'default'}}/>
+                    </div>
+                    <div className="about-text scroll-fade-in" id="about-text">
+                        <h1>Reinforcing Strength.</h1>
+                        <h2>Built for life.</h2>
+                        <p>
+                            With decades of industry experience, Anchor Steel supplies high-quality reinforcing solutions to major projects across Australia. Our commitment to strength, reliability, and delivery excellence defines who we are.
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div className="main-prodserv">
-                <h1>Products/Services Section</h1>
-                <p>Section for products and services.</p>
+                <h1>Our Products & Services</h1>
+                <div className="services-grid">
+                    <div className="service-card">
+                        <img src={placeholder} alt="Cut & Bent Steel" />
+                        <h3>Cut & Bent Steel</h3>
+                        <p>Precision-cut and bent reinforcement bars tailored for your job site.</p>
+                    </div>
+                    <div className="service-card">
+                        <img src={mesh} alt="Mesh Reinforcement" />
+                        <h3>Mesh Reinforcement</h3>
+                        <p>Standard and custom mesh solutions for foundations and slabs.</p>
+                    </div>
+                    <div className="service-card">
+                        <img src={placeholder} alt="On-Site Scheduling" />
+                        <h3>On-Site Scheduling</h3>
+                        <p>Reliable delivery scheduling to ensure smooth project timelines.</p>
+                    </div>
+                    <div className="service-card">
+                        <img src={placeholder} alt="Delivery Logistics" />
+                        <h3>Delivery Logistics</h3>
+                        <p>Coordinated transport of materials direct to your site, hassle-free.</p>
+                    </div>
+                </div>
             </div>
+
             <div className="main-projects">
-                <h1>Projects Section</h1>
-                <p>Section for projects.</p>
+                <h1>Our Work in Action</h1>
+                <div className="project-gallery">
+                    <img src={photo1} alt="Project 1" />
+                    <img src={photo2} alt="Project 2" />
+                    <img src={photo3} alt="Project 3" />
+                </div>
             </div>
+
             <div className="main-contact">
-                <h1>Contact</h1>
-                <p>Section for contact.</p>
+                <h1>Get In Touch</h1>
+                <p>Have questions or want a quote? We're just a message away.</p>
+                <Link to="/contact">
+                    <button className="contact-btn">Contact Us</button>
+                </Link>
             </div>
         </div>
     );

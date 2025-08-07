@@ -10,7 +10,7 @@ function Contact() {
                     While the details are still being finalized, all essential contact information is available below. 
                     If you have any questions or need assistance, feel free to reach out — we’d be happy to help.</p>
                     <h3>Address:</h3>
-                    <p>46 Williamson Road, Ingleburn</p>
+                    <p>46 Williamson Road, Ingleburn, 2565, Sydney</p>
             </header>
             <div className="grid">
                 <div className="vertical-card">

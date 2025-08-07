@@ -11,26 +11,29 @@ function Navbar() {
     return (
         <nav className="navbar">
             <Link to="/">            
-            <img src ={logo}
-            alt="Anchor Steel Logo"
-            className="navbar-logo"/>
+                <img src={logo} alt="Anchor Steel Logo" className="navbar-logo" />
             </Link>
-            <img src={rotatinglogo} alt="Rotating Logo" className="rotating-logo"/>
-            <div className="navbar-links">
-               <Link to="/about" className="nav-button">About Us</Link>
-               <Link to="/contact" className="nav-button">Contact</Link>
-               <Link to="/projects" className="nav-button">Projects</Link>
-               <Link to="/products" className="nav-button">Products & Services</Link>
+            <img src={rotatinglogo} style={{cursor: 'default'}} alt="Rotating Logo" className="rotating-logo" />
+
+            <div className="navbar-center">
+                <div className="navbar-links">
+                <Link to="/about" className="nav-button">About Us</Link>
+                <Link to="/contact" className="nav-button">Contact</Link>
+                <Link to="/projects" className="nav-button">Projects</Link>
+                <Link to="/products" className="nav-button">Products & Services</Link>
+                </div>
+                <button className="quote-button">Get A Quote</button>
             </div>
+
             <div className="navbar-social">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <img src={facebook} alt="Facebook" className="social-icon"/>
+                <img src={facebook} alt="Facebook" className="social-icon" />
                 </a>
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <img src={linkedin} alt ="LinkedIn" className="social-icon"></img>
+                <img src={linkedin} alt="LinkedIn" className="social-icon" />
                 </a>
-                <a href = "https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <img src={instagram} alt = "Instagram" className="social-icon"></img>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src={instagram} alt="Instagram" className="social-icon" />
                 </a>
             </div>
         </nav>

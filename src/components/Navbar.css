@@ -7,6 +7,12 @@
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* reduce or increase spacing between links and button */
+}
+
 .navbar-logo {
     height: 60px;
     object-fit: contain;
@@ -54,6 +60,22 @@
 }
 .rotating-logo {
   height: 60px;
-  animation: spin 5s linear infinite;
+  animation: spin 3.5s linear infinite;
   object-fit: contain;
+  cursor: default;
 } 
+
+.quote-button {
+    background-color: #000E99;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.quote-button:hover {
+    background-color: #0055cc;
+    transform: scale(1.05);
+}
