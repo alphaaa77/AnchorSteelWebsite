@@ -4,9 +4,11 @@ import '../components/About.css';
 function About() {
     return (
         <div className="section about-us">
-            <header>
+            <header className="animated-header">
+                <div className="header-overlay">
                 <h1>About Anchor Steel</h1>
                 <p>Ipsum ut sunt in quis non aliqua proident aliqua ullamco ea.</p>
+                </div>
             </header>
 
             <section className="about-overview">

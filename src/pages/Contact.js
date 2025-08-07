@@ -1,17 +1,55 @@
 import React from 'react';
 import '../App.css';
-
+import '../components/Contact.css';
+import placeholder from '../assets/placeholder.jpg';
 function Contact() {
     return(
         <div className="section">
-            <header className="header">
+            <header className="animated-header">
+                <div className="header-overlay">
                 <h1>Contact Us!</h1>
                 <p>This website is currently under development. 
                     While the details are still being finalized, all essential contact information is available below. 
                     If you have any questions or need assistance, feel free to reach out — we’d be happy to help.</p>
                     <h3>Address:</h3>
                     <p>46 Williamson Road, Ingleburn, 2565, Sydney</p>
+                </div>
             </header>
+
+            <div className="contact-form-section">
+                <div className="contact-form-container">
+                    <form className="contact-form">
+                        <h2>Contact Form</h2>
+                        <label>First Name</label>
+                        <input type="text" placeholder="Enter your first name" />
+
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Enter your last name" />
+
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter your email" />
+
+                        <label>Message</label>
+                        <textarea placeholder="Type your message here..." rows="5"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+
+                    <div className="contact-info-card">
+                        <img src={placeholder} alt="Get in Touch" />
+                        <div className="info-content">
+                            <h3>Get in Touch With Us</h3>
+                            <p>We’ll be happy to help with any inquiries, quotes, or general information.</p>
+                            <p>Expect a friendly reply within 1–2 business days.</p>
+                            <h3>Address:</h3>
+                            <p>46 Williamson Road</p>
+                            <p>Ingleburn</p>
+                            <p>Sydney</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="grid">
                 <div className="vertical-card">
                     <div className="card-text">

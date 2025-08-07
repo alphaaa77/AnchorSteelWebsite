@@ -1,5 +1,47 @@
+.animated-header {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-image: url('placeholdersteel.jpg'); /* <-- replace with actual path */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomInBackground 7s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes zoomInBackground {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+.header-overlay {
+  position: absolute; /* not relative */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 91%;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  overflow: hidden;
+  z-index: 2; /* just to be sure it's on top */
+}
+
 .about-us {
-  padding: 40px 20px;
+  padding: 10px 0.1px;
   background-color: #f5fcf9;
   color: #2C3E50;
   font-family: 'Oswald', sans-serif;
@@ -7,15 +49,15 @@
 
 /* Header */
 .about-us header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  color: #7AABC7;
+  font-size: 5.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
   text-align: center;
 }
 
 .about-us header p {
-  font-size: 1.2rem;
-  color: #2C3E50;
+  font-size: 2.2rem;
+  color: #d6d6d6;
   max-width: 700px;
   margin: 0 auto 30px auto;
   text-align: center;
