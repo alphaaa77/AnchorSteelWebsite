@@ -3,7 +3,7 @@
   width: 100%;
   height: 250px;
   overflow: hidden;
-  background-image: url('aboutuspic.jpg'); /* <-- replace with actual path */
+  background-image: url('../aboutuspic.jpg'); /* <-- replace with actual path */
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;

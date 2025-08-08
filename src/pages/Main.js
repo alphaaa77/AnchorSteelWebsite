@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
-import '../components/Main.css';
-import photo1 from '../assets/testproject/photo1.jpg';
+import '../components/CSS files/Main.css';
 import photo3 from '../assets/testproject/photo3.jpg';
+import mainpic from '../assets/mainpic.jpg';
 import frenchforest from '../assets/frenchforest/image1.jpg';
 import bunningstempe from '../assets/bunningstempe/image1.jpg';
 import placeholder from '../assets/placeholder.jpg';
@@ -45,7 +45,7 @@ function Main() {
                     <img src={sslogo} alt="Partner 2" />
                     <img src={sslogo} alt="Partner 3" />
                     <img src={sslogo} alt="Partner 4" />
-                    
+
                     <img src={sslogo} alt="Partner 1 duplicate" />
                     <img src={sslogo} alt="Partner 2 duplicate" />
                     <img src={sslogo} alt="Partner 3 duplicate" />
@@ -56,7 +56,7 @@ function Main() {
             <div className="main-about">
                 <div className="about-content">
                     <div className="about-image scroll-fade-in" id="about-img">
-                        <img src={photo1} alt="Reinforcing steel work" style={{cursor: 'default'}}/>
+                        <img src={mainpic} alt="Reinforcing steel work" style={{cursor: 'default'}}/>
                     </div>
                     <div className="about-text scroll-fade-in" id="about-text">
                         <h1>Reinforcing Strength.</h1>

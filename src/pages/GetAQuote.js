@@ -1,4 +1,4 @@
-import '../components/GetAQuote.css';
+import '../components/CSS files/GetAQuote.css';
 import React, {useState} from 'react';
 
 function GetAQuote() {

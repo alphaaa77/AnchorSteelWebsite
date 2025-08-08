@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import '../components/Projects.css';
+import '../components/CSS files/Projects.css';
 import { Link } from 'react-router-dom';
 import photo3 from '../assets/testproject/photo3.jpg';
 import frenchforest from '../assets/frenchforest/image1.jpg';
@@ -45,7 +45,7 @@ function Projects() {
     setSlideDirection('right');
     setPrevSlide(currentSlide)
       setCurrentSlide((prev) => (prev + 1) % projectData.length);
-    }, 3000); // change seconds depending
+    }, 3500); // change seconds depending
     return () => clearInterval(interval);
   }, [currentSlide, projectData.length]);
 

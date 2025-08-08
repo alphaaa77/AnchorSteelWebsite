@@ -6,6 +6,7 @@ import Main from './pages/Main';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
+import Services from './pages/Services';
 import Projects from './pages/Projects';
 import GetAQuote from './pages/GetAQuote';
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/projects/testprojecttwo" element={<TestProjectTwo/>}/>
 
             <Route path="/products" element={<Products />} />
+            <Route path="/services" element={<Services/>} />
             <Route path="/getaquote" element={<GetAQuote/>} />
           </Routes>
         </main>

@@ -1,0 +1,52 @@
+.services-animated-header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-image: url('../contact.jpg'); /* <-- replace with actual path */
+  background-size: 100%;
+  background-position: 80% 45%;
+  background-repeat: no-repeat;
+  animation: zoomInBackground 7s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes zoomInBackground {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+.services-header-overlay {
+  position: absolute; /* not relative */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 91%;
+  color: white;
+  background: rgba(48, 48, 48, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  overflow: hidden;
+  margin-top: -30px;
+  z-index: 2; /* just to be sure it's on top */
+}
+.services-header-overlay h1 {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+.services-header-overlay p {
+  font-size: 1.7rem;
+  max-width: 600px;
+  color:aliceblue;
+}

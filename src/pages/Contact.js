@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import '../components/Contact.css';
+import '../components/CSS files/Contact.css';
 import placeholder from '../assets/placeholder.jpg';
 function Contact() {
     return(

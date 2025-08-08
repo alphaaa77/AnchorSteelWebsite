@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/SS Logo.png';
-import './Navbar.css';
+import './CSS files/Navbar.css';
 import facebook from '../assets/facebook.png';
 import linkedin from '../assets/linkedin.png';
 import instagram from '../assets/instagram.png';
@@ -17,7 +17,8 @@ function Navbar() {
                 <Link to="/about" className="nav-button">About Us</Link>
                 <Link to="/contact" className="nav-button">Contact</Link>
                 <Link to="/projects" className="nav-button">Projects</Link>
-                <Link to="/products" className="nav-button">Products & Services</Link>
+                <Link to="/products" className="nav-button">Products</Link>
+                <Link to="/services" className="nav-button">Services</Link>
                 </div>
                 <Link to="/getaquote">          
                     <button className="quote-button">Get A Quote</button>

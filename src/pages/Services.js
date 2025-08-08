@@ -1,12 +1,12 @@
 import React from 'react';
-import '../components/CSS files/Products.css';
+import '../components/CSS files/Services.css';
 import '../App.css';
 function Products() {
     return (
         <div className="section">
-            <header className="products-animated-header">
-                <div className="products-header-overlay">
-                    <h1>Products Page</h1>
+            <header className="services-animated-header">
+                <div className="services-header-overlay">
+                    <h1>Services Page</h1>
                     <p>Coming Soon!</p>
                 </div>
             </header>
