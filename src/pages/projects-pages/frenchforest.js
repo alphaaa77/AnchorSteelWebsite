@@ -2,16 +2,14 @@ import React, {useState} from 'react';
 import '../../App.css';
 
 // USE THIS PAGE AS A TEMPLATE FOR ALL FUTURE PROJECTS FROM NOW ON, JUST COPY PASTE THIS
-// USE THIS PAGE AS A TEMPLATE FOR ALL FUTURE PROJECTS FROM NOW ON, JUST COPY PASTE THIS
-// USE THIS PAGE AS A TEMPLATE FOR ALL FUTURE PROJECTS FROM NOW ON, JUST COPY PASTE THIS
-// USE THIS PAGE AS A TEMPLATE FOR ALL FUTURE PROJECTS FROM NOW ON, JUST COPY PASTE THIS
 
 // Sample images
-import photo1 from '../../assets/anchorsteellogo.png'
-import photo2 from '../../assets/anchorsteellogo.png'
-import photo3 from '../../assets/anchorsteellogo.png'
-function TestProject() {
-    const images = [photo1, photo2, photo3]; // insert as much images as you need, make sure its all imported 
+import image0 from '../../assets/frenchforest/image0.jpg';
+import image1 from '../../assets/frenchforest/image1.jpg';
+import image2 from '../../assets/frenchforest/image2.jpg';
+import image3 from '../../assets/frenchforest/image3.jpg';
+function FrenchForest() {
+    const images = [image0, image1, image2, image3]; // insert as much images as you need, make sure its all imported 
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const goPrev = () => {
@@ -24,9 +22,9 @@ function TestProject() {
     return (
         <div className="section">
             <header>
-                <h1>Test project one :)</h1>
+                <h1>7 Rodborough Road</h1>
                 <h3>Project Name:</h3>
-                <p>Test Project</p>
+                <p>7 Rodborough Road, Frenchs Forest, NSW 2086</p>
                 <h3>Client Name:</h3>
                 <p>Test Client</p>
                 <h3>Project Overview:</h3>
@@ -51,4 +49,4 @@ function TestProject() {
         </div>
     );
 }
-export default TestProject;
+export default FrenchForest;

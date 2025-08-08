@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import '../components/Projects.css';
 import { Link } from 'react-router-dom';
-import photo1 from '../assets/testproject/photo1.jpg';
-import photo2 from '../assets/testproject/photo2.jpg';
 import photo3 from '../assets/testproject/photo3.jpg';
+import frenchforest from '../assets/frenchforest/image1.jpg';
+import bunningstempe from '../assets/bunningstempe/image1.jpg';
 
 function Projects() {
   const [activeCard, setActiveCard] = useState(null);
@@ -18,16 +18,16 @@ function Projects() {
 
   const projectData = [
     {
-      title: 'Project A',
-      desc: 'Contact us for more information :)',
-      img: photo1,
+      title: '7 Rodborough Road, Frenchs Forests',
+      desc: 'Warehouse, Factory & Industrial Buildings',
+      img: frenchforest,
       details: 'Placeholder text.',
-      link: '/projects/testproject',
+      link: '/projects/frenchforest',
     },
     {
-      title: 'Project B',
+      title: 'Bunnings Tempe',
       desc: 'More info coming soon!!!!',
-      img: photo2,
+      img: bunningstempe,
       details: 'Placeholder text.',
       link: '/projects/testprojecttwo',
     },

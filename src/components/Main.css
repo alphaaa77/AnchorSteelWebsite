@@ -80,6 +80,7 @@
   text-align: center;
   padding: 15px;
   overflow: hidden;
+  margin-top: -35px;
   z-index: 2; /* just to be sure it's on top */
 }
 

@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom';
 import '../App.css';
 import '../components/Main.css';
 import photo1 from '../assets/testproject/photo1.jpg';
-import photo2 from '../assets/testproject/photo2.jpg';
 import photo3 from '../assets/testproject/photo3.jpg';
+import frenchforest from '../assets/frenchforest/image1.jpg';
+import bunningstempe from '../assets/bunningstempe/image1.jpg';
 import placeholder from '../assets/placeholder.jpg';
 import mesh from '../assets/mesh.jpeg';
 import sslogo from '../assets/SS Logo.png';
@@ -44,6 +45,7 @@ function Main() {
                     <img src={sslogo} alt="Partner 2" />
                     <img src={sslogo} alt="Partner 3" />
                     <img src={sslogo} alt="Partner 4" />
+                    
                     <img src={sslogo} alt="Partner 1 duplicate" />
                     <img src={sslogo} alt="Partner 2 duplicate" />
                     <img src={sslogo} alt="Partner 3 duplicate" />
@@ -95,8 +97,8 @@ function Main() {
             <div className="main-projects">
                 <h1>Our Work in Action</h1>
                 <div className="project-gallery">
-                    <img src={photo1} alt="Project 1" />
-                    <img src={photo2} alt="Project 2" />
+                    <img src={frenchforest} alt="7 Rodborough Road" />
+                    <img src={bunningstempe} alt="Bunnings Tempe" />
                     <img src={photo3} alt="Project 3" />
                 </div>
             </div>

@@ -3,9 +3,9 @@
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background-image: url('anchorsteel.jpg'); /* <-- replace with actual path */
+  background-image: url('contact.jpg'); /* <-- replace with actual path */
   background-size: 100%;
-  background-position: 80% 35%;
+  background-position: 80% 45%;
   background-repeat: no-repeat;
   animation: zoomInBackground 7s ease-out forwards;
   display: flex;
