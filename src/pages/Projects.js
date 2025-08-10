@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import '../components/CSS files/Projects.css';
 import { Link } from 'react-router-dom';
-import photo3 from '../assets/testproject/photo3.jpg';
-import frenchforest from '../assets/frenchforest/image1.jpg';
-import bunningstempe from '../assets/bunningstempe/image1.jpg';
+import frenchforest from '../assets/frenchforest/image1.JPG';
+import bunningstempe from '../assets/bunningstempe/image1.JPG';
 
 function Projects() {
   const [activeCard, setActiveCard] = useState(null);
@@ -29,14 +28,8 @@ function Projects() {
       desc: 'More info coming soon!!!!',
       img: bunningstempe,
       details: 'Placeholder text.',
-      link: '/projects/testprojecttwo',
-    },
-    {
-      title: 'Project C',
-      desc: 'Currently in development.',
-      img: photo3,
-      details: 'Placeholder text.',
-    },
+      link: '/projects/bunningstempe',
+    }
   ];
 
   // Auto-advance slideshow

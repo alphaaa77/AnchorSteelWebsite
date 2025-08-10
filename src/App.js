@@ -11,8 +11,7 @@ import Projects from './pages/Projects';
 import GetAQuote from './pages/GetAQuote';
 
 import FrenchForest from './pages/projects-pages/frenchforest';
-import TestProject from '././pages/projects-pages/testproject';
-import TestProjectTwo from '././pages/projects-pages/testprojecttwo';
+import BunningsTempe from './pages/projects-pages/bunningstempe';
 
 function App() {
   return (
@@ -28,8 +27,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
 
             <Route path="/projects/frenchforest" element={<FrenchForest/>}/>
-            <Route path="/projects/testproject" element={<TestProject/>}/>
-            <Route path="/projects/testprojecttwo" element={<TestProjectTwo/>}/>
+            <Route path="/projects/bunningstempe" element={<BunningsTempe/>}/>
 
             <Route path="/products" element={<Products />} />
             <Route path="/services" element={<Services/>} />

@@ -2,10 +2,9 @@ import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 import '../components/CSS files/Main.css';
-import photo3 from '../assets/testproject/photo3.jpg';
 import mainpic from '../assets/mainpic.jpg';
-import frenchforest from '../assets/frenchforest/image1.jpg';
-import bunningstempe from '../assets/bunningstempe/image1.jpg';
+import frenchforest from '../assets/frenchforest/image1.JPG';
+import bunningstempe from '../assets/bunningstempe/image1.JPG';
 import placeholder from '../assets/placeholder.jpg';
 import mesh from '../assets/mesh.jpeg';
 import sslogo from '../assets/SS Logo.png';
@@ -99,7 +98,6 @@ function Main() {
                 <div className="project-gallery">
                     <img src={frenchforest} alt="7 Rodborough Road" />
                     <img src={bunningstempe} alt="Bunnings Tempe" />
-                    <img src={photo3} alt="Project 3" />
                 </div>
             </div>
 

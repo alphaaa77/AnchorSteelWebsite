@@ -87,6 +87,7 @@
 .header-overlay h1 {
   font-size: 4.5rem;
   margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
 }
 
 .header-overlay p {
