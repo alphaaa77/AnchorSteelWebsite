@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import '../App.css';
 import '../components/CSS files/Main.css';
 import mainpic from '../assets/mainpic.jpg';
+import cutandbent from '../assets/cutandbent.JPG';
 import frenchforest from '../assets/frenchforest/image1.JPG';
 import bunningstempe from '../assets/bunningstempe/image1.JPG';
 import placeholder from '../assets/placeholder.jpg';
@@ -71,7 +72,7 @@ function Main() {
                 <h1>Our Products & Services</h1>
                 <div className="services-grid">
                     <div className="service-card">
-                        <img src={placeholder} alt="Cut & Bent Steel" />
+                        <img src={cutandbent} alt="Cut & Bent Steel" />
                         <h3>Cut & Bent Steel</h3>
                         <p>Precision-cut and bent reinforcement bars tailored for your job site.</p>
                     </div>

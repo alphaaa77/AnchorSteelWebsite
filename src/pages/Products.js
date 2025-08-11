@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../components/CSS files/Products.css';
 import '../App.css';
 import placeholder from '../assets/placeholder.jpg';
 
 function Products() {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const toggle = (i) => setExpandedIndex(expandedIndex === i ? null : i);
+
   return (
     <div className="section">
       <header className="products-animated-header">
@@ -14,31 +18,82 @@ function Products() {
         </div>
       </header>
 
-      <div className="products-grid">
-        <div className="product-card">
+      <div className="grid">
+        {/* Rebar */}
+        <div
+          className={`vertical-card ${expandedIndex === 0 ? 'expanded' : ''}`}
+          onClick={() => toggle(0)}
+        >
           <img src={placeholder} alt="Rebar" />
-          <h2>Rebar</h2>
-          <p>(N12, N16 etc.)</p>
-          <p>Various sizes of reinforcing steel bars for concrete reinforcement</p>
+          <div className="card-text">
+            <h2>Rebar</h2>
+            <p>(N12, N16 etc.)</p>
+            {expandedIndex === 0 && (
+              <>
+                <p className="card-details">
+                  Various sizes of reinforcing steel bars for concrete reinforcement
+                </p>
+                <Link
+                  to="/rebar"
+                  className="view-more-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  View More
+                </Link>
+              </>
+            )}
+          </div>
         </div>
 
-        <div className="product-card">
+        {/* Mesh */}
+        <div
+          className={`vertical-card ${expandedIndex === 1 ? 'expanded' : ''}`}
+          onClick={() => toggle(1)}
+        >
           <img src={placeholder} alt="Mesh" />
-          <h2>Mesh</h2>
-          <p>(SL62, SL92 etc.)</p>
-          <p>Pre-fabricated steel mesh sets for slab and wall reinforcement</p>
+          <div className="card-text">
+            <h2>Mesh</h2>
+            <p>(SL62, SL92 etc.)</p>
+            {expandedIndex === 1 && (
+              <>
+                <p className="card-details">
+                  Pre-fabricated steel mesh sets for slab and wall reinforcement
+                </p>
+                <Link
+                  to="/mesh"
+                  className="view-more-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  View More
+                </Link>
+              </>
+            )}
+          </div>
         </div>
 
-        <div className="product-card">
+        {/* Accessories */}
+        <div
+          className={`vertical-card ${expandedIndex === 2 ? 'expanded' : ''}`}
+          onClick={() => toggle(2)}
+        >
           <img src={placeholder} alt="Accessories" />
-          <h2>Accessories</h2>
-          <p>Ties, bar chairs, spacers, and other reinforcement accessories</p>
-        </div>
-
-        <div className="product-card">
-          <img src={placeholder} alt="Cut & Bent" />
-          <h2>Cut & Bent</h2>
-          <p>Custom cut and bent reinforcing steel to meet specific project requirements</p>
+          <div className="card-text">
+            <h2>Accessories</h2>
+            {expandedIndex === 2 && (
+              <>
+                <p className="card-details">
+                  Ties, bar chairs, spacers, and other reinforcement accessories
+                </p>
+                <Link
+                  to="/accessories"
+                  className="view-more-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  View More
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>

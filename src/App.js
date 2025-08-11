@@ -10,13 +10,16 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import GetAQuote from './pages/GetAQuote';
 
+import Rebar from './pages/products-pages/Rebar';
+import Mesh from './pages/products-pages/Mesh';
+import Accessories from './pages/products-pages/Accessories';
+
 import FrenchForest from './pages/projects-pages/frenchforest';
 import BunningsTempe from './pages/projects-pages/bunningstempe';
 
 function App() {
   return (
     <Router>
-      {/* Full page layout wrapper */}
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
@@ -25,6 +28,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+
+            <Route path="/rebar" element={<Rebar/>}/>
+            <Route path="/mesh" element={<Mesh/>}/>
+            <Route path="/accessories" element={<Accessories/>}/>
 
             <Route path="/projects/frenchforest" element={<FrenchForest/>}/>
             <Route path="/projects/bunningstempe" element={<BunningsTempe/>}/>

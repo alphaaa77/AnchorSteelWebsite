@@ -134,7 +134,7 @@
 }
 /* ========== About ========== CSS */
 .main-about {
-  background-color: #d1edc1;
+  background-color: #E8F9FF;
   padding: 60px 20px;
 }
 
@@ -221,7 +221,7 @@
   color: #555;
 }
 .main-prodserv {
-  background-color: #AAF0E9; 
+  background-color:#E1FFDB; 
   padding-top: 5px;
   padding-bottom: 20px;
 }
@@ -245,14 +245,14 @@
   transform: scale(1.05);
 }
 .main-projects {
-  background-color: #d1edc1;
+  background-color: #E8F9FF;
   padding-top: 5px;
   padding-bottom: 20px;
 }
 /* ================================ */
 /* ========== Contact ========== */
 .main-contact {
-  background-color: #AAF0E9;
+  background-color: #E1FFDB;
   padding-top: 5px;
   padding-bottom: 20px;
 }
