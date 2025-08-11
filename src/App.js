@@ -9,6 +9,7 @@ import Products from './pages/Products';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import GetAQuote from './pages/GetAQuote';
+import CapStatement from './pages/CapStatement';
 
 import Rebar from './pages/products-pages/Rebar';
 import Mesh from './pages/products-pages/Mesh';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/capstatement" element={<CapStatement/>}/>
 
             <Route path="/rebar" element={<Rebar/>}/>
             <Route path="/mesh" element={<Mesh/>}/>

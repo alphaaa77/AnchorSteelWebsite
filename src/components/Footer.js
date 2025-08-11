@@ -6,32 +6,43 @@ function Footer() {
   return (
     <footer className="simple-footer">
       <div className="footer-container">
+        {/* Logo on top */}
         <div className="footer-logo">
           <img className="rotate-logo" src={anchorLogo} alt="Anchor Steel Logo" />
         </div>
 
-        <div className="footer-links two-col">
-          <ul>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/getaquote">Get A Quote</a></li>
-            <li>
-              <a href="/files/Anchor-Steel-Terms-&-Conditions.pdf" target="_blank" rel="noopener noreferrer">
-                Terms &amp; Conditions
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="/files/Anchor-Steel-Account-Opening-Form.pdf" target="_blank" rel="noopener noreferrer">
-                Account Opening Form
-              </a>
-            </li>
-            <li><a href="/pricelist">Price List</a></li>
-            <li><a href="/credit">Credit Application</a></li>
-            <li><a href="/acrs">ACRS Certification</a></li>
-          </ul>
+        {/* New grid: left = contact, right = two link columns */}
+        <div className="footer-grid">
+          <div className="footer-contact">
+            <h4>Anchor Steel Pty Ltd</h4>
+            <p>46 Williamson Road, Ingleburn<br/>Sydney NSW 2565</p>
+            <p>
+              <a href="tel:+61255550000">+61 2 9999 9999</a><br/>
+              <a href="mailto:sales@anchorsteel.com.au">sales@anchorsteel.com.au</a>
+            </p>
+          </div>
+
+          <div className="footer-links two-col">
+            <ul>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/products">Products</a></li>
+              <li><a href="/getaquote">Get A Quote</a></li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/files/Anchor-Steel-Account-Opening-Form.pdf" target="_blank" rel="noopener noreferrer">
+                  Account Opening Form
+                </a>
+              </li>
+              <li>
+                <a href="/files/Anchor-Steel-Terms-&-Conditions.pdf" target="_blank" rel="noopener noreferrer">
+                  Terms &amp; Conditions
+                </a>
+              </li>
+              <li><a href="/capstatement">Capability Statement</a></li>
+            </ul>
+          </div>
         </div>
 
         <div className="footer-bottom">
