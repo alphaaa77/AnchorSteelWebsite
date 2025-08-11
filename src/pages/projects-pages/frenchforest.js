@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import '../../App.css';
 
 // Sample images
-import image1 from '../../assets/frenchforest/image1.JPG';
-import image2 from '../../assets/frenchforest/image2.JPG';
-import image3 from '../../assets/frenchforest/image3.JPG';
+import image1 from '../../assets/frenchforest/image1.jpg';
+import image2 from '../../assets/frenchforest/image2.jpg';
+import image3 from '../../assets/frenchforest/image3.jpg';
 import image4 from '../../assets/frenchforest/image4.JPG';
 import image5 from '../../assets/frenchforest/image5.jpg';
 function FrenchForest() {

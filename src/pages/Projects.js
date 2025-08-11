@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import '../components/CSS files/Projects.css';
 import { Link } from 'react-router-dom';
-import frenchforest from '../assets/frenchforest/image1.JPG';
-import bunningstempe from '../assets/bunningstempe/image1.JPG';
+import frenchforest from '../assets/frenchforest/image1.jpg';
+import bunningstempe from '../assets/bunningstempe/image1.jpg';
 
 function Projects() {
   const [activeCard, setActiveCard] = useState(null);

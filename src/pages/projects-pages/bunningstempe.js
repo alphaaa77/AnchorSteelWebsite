@@ -3,7 +3,7 @@ import '../../App.css';
 
 
 // Sample images
-import image1 from '../../assets/bunningstempe/image1.JPG';
+import image1 from '../../assets/bunningstempe/image1.jpg';
 import image2 from '../../assets/bunningstempe/image2.JPG';
 import image3 from '../../assets/bunningstempe/image3.JPG';
 
