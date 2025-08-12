@@ -4,7 +4,8 @@ import '../components/CSS files/Projects.css';
 import { Link } from 'react-router-dom';
 import frenchforest from '../assets/frenchforest/image1.jpg';
 import bunningstempe from '../assets/bunningstempe/image1.jpg';
-
+import arrowback from '../assets/arrow-back.png';
+import arrownext from '../assets/arrow-next.png';
 function Projects() {
   const [activeCard, setActiveCard] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,10 +82,10 @@ function Projects() {
                 <p>{projectData[currentSlide].desc}</p>
                 </div>
                 <button className="slideshow-button left" onClick={handlePrev}>
-                {'<'}
+                <img src={arrowback} alt="Back"/>
                 </button>
                 <button className="slideshow-button right" onClick={handleNext}>
-                {'>'}
+                <img src={arrownext} alt="Next"/>
                 </button>
             </div>
         </div>

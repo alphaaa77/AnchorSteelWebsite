@@ -69,8 +69,9 @@
     background-color: #000E99;
     color: white;
     border: none;
+    font-family: 'Oswald', sans-serif;
     padding: 8px 16px;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;

@@ -43,7 +43,7 @@
 
 .about-us {
   padding: 10px 0.1px;
-  background-color: #f5fcf9;
+  background-color: #ffffff;
   color: #2C3E50;
   font-family: 'Oswald', sans-serif;
 }
@@ -89,6 +89,7 @@
   line-height: 1.7;
   color: #2C3E50;
   margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Core Values List */

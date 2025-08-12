@@ -27,7 +27,21 @@ function Footer() {
               <li><a href="/contact">Contact Us</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/products">Products</a></li>
-              <li><a href="/getaquote">Get A Quote</a></li>
+                <li>
+                <a
+                    href="/getaquote"
+                    style={{
+                    backgroundColor: "#0084ffff",
+                    color: "#000",
+                    padding: "6px 12px",
+                    borderRadius: "4px",
+                    textDecoration: "none",
+                    display: "inline-block"
+                    }}
+                >
+                    Get A Quote
+                </a>
+                </li>
             </ul>
             <ul>
               <li>
@@ -40,7 +54,7 @@ function Footer() {
                   Terms &amp; Conditions
                 </a>
               </li>
-              <li><a href="/capstatement">Capability Statement</a></li>
+              <li><a href="/capstatement">Mission Statement</a></li>
             </ul>
           </div>
         </div>

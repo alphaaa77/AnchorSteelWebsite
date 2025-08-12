@@ -67,18 +67,6 @@
   font-size: 0.85rem;
   color: #555;
 }
-.rotate-logo {
-  animation: rotate 5s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* contact block */
 .footer-contact h4 {
   margin: 0 0 6px;

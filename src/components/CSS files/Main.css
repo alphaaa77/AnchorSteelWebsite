@@ -95,13 +95,25 @@
   max-width: 600px;
   color:aliceblue;
 }
-/* Partnered Companies */
+/* ============== Partnered Companies ================= */
 .logo-banner {
   overflow: hidden;
   background-color: #ffffff;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
+  padding: 30px 0 20px; /* more top padding for heading */
+  border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ddd;
+  text-align: center; /* centers heading */
+}
+
+.logo-banner-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d47a1; /* cleaner dark blue */
+  margin-bottom: 12px;
+  margin-top: -30px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #b8b8b8; /* the divider line */
+  display: inline-block; /* makes the line only as wide as the text */
 }
 
 .logo-track {
@@ -132,6 +144,7 @@
     transform: translateX(-50%);
   }
 }
+
 /* ========== About ========== CSS */
 .main-about {
   background-color: #ffffff;
@@ -162,7 +175,7 @@
 }
 
 .about-text h1 {
-  color:rgb(73, 188, 255);
+  color:#000E99;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -176,6 +189,7 @@
 .about-text p {
   font-size: 1.1rem;
   color: #444;
+  font-family:'Poppins', sans-serif;
 }
 /* =============================== */
 /* ========== Produces & Services ========== */
@@ -220,6 +234,7 @@
 .service-card p {
   font-size: 0.95rem;
   color: #555;
+  font-family:'Poppins',sans-serif;
 }
 .main-prodserv {
   background-color:#ffffff; 
@@ -227,7 +242,7 @@
   padding-bottom: 20px;
 }
 .main-prodserv h1{
-  color:rgb(73, 188, 255);
+  color:#000E99;
 }
 /* ========================================= */
 /* ========== Projects ========== */
@@ -253,12 +268,18 @@
   padding-top: 5px;
   padding-bottom: 20px;
 }
+.main-projects h1 {
+  color:#000E99;
+}
 /* ================================ */
 /* ========== Contact ========== */
 .main-contact {
   background-color: #ffffff;
   padding-top: 5px;
   padding-bottom: 20px;
+}
+.main-contact p {
+  font-family:'Poppins',sans-serif;
 }
 .contact-btn {
   padding: 10px 30px;

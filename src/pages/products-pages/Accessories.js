@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import '../../components/CSS files/Products.css';
 import '../../App.css';
 import placeholder from '../../assets/placeholder.jpg';
@@ -14,33 +15,40 @@ function Accessories() {
     { title: 'Caps & Safety', sub: 'Mushroom caps', desc: 'Safety caps for exposed bar ends on site.' },
   ];
 
-  return (
+    return (
     <div className="section">
-      <header className="products-animated-header">
+        <header className="products-animated-header">
         <div className="products-header-overlay">
-          <h1>Accessories</h1>
-          <p>Everything you need to tie, support, and space reinforcement</p>
+            <h1>Rebar</h1>
+            <p>Deformed reinforcing bars for structural concrete</p>
         </div>
-      </header>
+        </header>
 
-      <div className="grid">
+        <div className="grid">
         {items.map((it, i) => (
-          <div
+            <div
             key={i}
             className={`vertical-card ${expandedIndex === i ? 'expanded' : ''}`}
             onClick={() => toggle(i)}
-          >
+            >
             <img src={placeholder} alt={it.title} />
             <div className="card-text">
-              <h2>{it.title}</h2>
-              {it.sub && <p>{it.sub}</p>}
-              {expandedIndex === i && <p className="card-details">{it.desc}</p>}
+                <h2>{it.title}</h2>
+                {it.sub && <p>{it.sub}</p>}
+                {expandedIndex === i && (
+                <>
+                    <p className="card-details">{it.desc}</p>
+                    <Link to={it.link} className="view-more-btn">
+                    View More
+                    </Link>
+                </>
+                )}
             </div>
-          </div>
+            </div>
         ))}
-      </div>
+        </div>
     </div>
-  );
+    );
 }
 
 export default Accessories;

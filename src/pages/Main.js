@@ -40,6 +40,9 @@ function Main() {
             </header>
 
             <div className="logo-banner">
+                <h2 className="logo-banner-heading">
+                    Proud partners with these companies!
+                </h2>
                 <div className="logo-track">
                     <img src={sslogo} alt="Partner 1" />
                     <img src={sslogo} alt="Partner 2" />
@@ -50,9 +53,19 @@ function Main() {
                     <img src={sslogo} alt="Partner 2 duplicate" />
                     <img src={sslogo} alt="Partner 3 duplicate" />
                     <img src={sslogo} alt="Partner 4 duplicate" />
+
+                    <img src={sslogo} alt="Partner 1 duplicate" />
+                    <img src={sslogo} alt="Partner 2 duplicate" />
+                    <img src={sslogo} alt="Partner 3 duplicate" />
+                    <img src={sslogo} alt="Partner 4 duplicate" />
+                    
+                    <img src={sslogo} alt="Partner 1 duplicate" />
+                    <img src={sslogo} alt="Partner 2 duplicate" />
+                    <img src={sslogo} alt="Partner 3 duplicate" />
+                    <img src={sslogo} alt="Partner 4 duplicate" />
                 </div>
             </div>
-
+            
             <div className="main-about">
                 <div className="about-content">
                     <div className="about-image scroll-fade-in" id="about-img">
