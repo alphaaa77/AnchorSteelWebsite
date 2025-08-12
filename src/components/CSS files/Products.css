@@ -1,43 +1,82 @@
-/* ======= Hero/Header ======= */
+/* ======= Hero/Header (full-bleed) ======= */
 .products-animated-header {
   position: relative;
-  width: 100%;
+  /* break out of centered container */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
   height: 200px;
   overflow: hidden;
+
+  /* full-cover background */
   background-image: url('../productsheader.jpg');
-  background-size: 100%;
-  background-position: 80% 45%;
+  background-size: cover;           /* was 100% */
+  background-position: center;      /* nicer default than 80% 45% */
   background-repeat: no-repeat;
+
   animation: zoomInBackground 7s ease-out forwards;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@keyframes zoomInBackground { 0% { background-size: 100%; } 100% { background-size: 110%; } }
+
+@keyframes zoomInBackground {
+  0%   { background-size: cover; }  /* start at cover */
+  100% { background-size: 115%; }   /* gentle zoom */
+}
+
+/* overlay should cover the whole header */
 .products-header-overlay {
   position: absolute;
-  top: 0; left: 0;
-  height: 100%; width: 100%; max-width: 91%;
-  color: #fff; background: rgba(48,48,48,.4);
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; padding: 15px; overflow: hidden; margin-top: -30px; z-index: 2;
-}
-.products-header-overlay h1 { font-size: 4.5rem; margin-bottom: 10px; }
-.products-header-overlay p { font-size: 1.7rem; max-width: 600px; color: aliceblue; }
+  inset: 0;                         /* top/right/bottom/left: 0 */
+  color: #fff;
+  background: rgba(43, 43, 43, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  z-index: 2;
 
-/* ======= Breadcrumbs ======= */
-.breadcrumb { font-size: .95rem; margin: 15px 0; color: #777; }
+  /* remove these old constraints */
+  /* max-width: 91%; */
+  /* margin-top: -30px; */
+}
+
+.products-header-overlay h1 { font-size: 4.5rem; margin-bottom: 10px; }
+.products-header-overlay p  { font-size: 1.7rem; max-width: 600px; color: aliceblue; }
+
+/* ===== Breadcrumb + intro ===== */
+.breadcrumb {
+  max-width: clamp(640px, 86vw, 840px);
+  margin: 32px auto 8px;       /* space below hero, small gap to intro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;                    /* spacing around › separators */
+  flex-wrap: wrap;             /* wrap nicely on small screens */
+  font-size: 1.05rem;
+  color: #777;
+  text-align: center;
+}
 .breadcrumb a { color: #0077cc; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
-.breadcrumb span { margin: 0 6px; }
-.breadcrumb .current { color: #333; font-weight: 700; }
+/* separators: no extra margins (gap handles spacing) */
+.breadcrumb span { margin: 0; opacity: .6; }
+.breadcrumb .current { color: #000000; font-weight: 700; }
 
-/* ======= Layout Width (center content) ======= */
-.product-intro,
-.breadcrumb,
+.product-intro {
+  max-width: clamp(640px, 86vw, 840px);
+  margin: 8px auto 24px;       /* gap from breadcrumb */
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ===== Table container width ===== */
 .prod-table-wrap {
-  /* tighten the whole block; tweak 960px to taste */
-  max-width: clamp(680px, 88vw, 960px);
+  max-width: clamp(640px, 86vw, 840px);
   margin: 0 auto;
 }
 

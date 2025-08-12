@@ -112,7 +112,7 @@ function DeformedRebar() {
         <span className="current">Deformed Bar - Grade R500N</span>
       </nav>
 
-      <p style={{fontFamily: 'Poppins, sans-serif'}}>
+      <p className="product-intro" style={{fontFamily: 'Poppins, sans-serif'}}>
         Et ea mollit sint reprehenderit quis exercitation tempor ullamco laborum aute reprehenderit do sint
         excepteur. Duis consectetur commodo qui cupidatat esse consequat. Mollit irure proident ullamco dolor est
         et mollit consequat nulla id dolor ut aute.
@@ -144,7 +144,6 @@ function DeformedRebar() {
                     <td><strong>{r.code}</strong></td>
                     <td>{r.diameter}</td>
                     <td>{r.area}</td>
-                    {/* removed r.stock cell to match 4 headers */}
                     <td className="chev-cell">
                         <button
                         className="row-toggle"
