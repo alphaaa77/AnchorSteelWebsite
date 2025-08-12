@@ -78,9 +78,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px;
+  padding: 25px;
   overflow: hidden;
-  margin-top: -35px;
+  margin-top: -45px;
   z-index: 2; /* just to be sure it's on top */
 }
 

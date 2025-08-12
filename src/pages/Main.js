@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 import '../components/CSS files/Main.css';
-import mainpic from '../assets/mainpic.jpg';
+import mainpic from '../assets/anchorsteelshow.jpg';
 import cutandbent from '../assets/cutandbent.JPG';
 import frenchforest from '../assets/frenchforest/image1.jpg';
 import bunningstempe from '../assets/bunningstempe/image1.jpg';
