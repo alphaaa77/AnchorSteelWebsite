@@ -9,10 +9,10 @@ function Rebar() {
   const toggle = (i) => setExpandedIndex(expandedIndex === i ? null : i);
 
     const items = [
-    { title: 'Rounded Rebar', sub: '(Standard Grade)', desc: 'Rounded rebar for major structural reinforcement.', link: '/products/rounded-rebar' },
-    { title: 'Deformed Rebar', sub: '(Standard Grade)', desc: 'Deformed rebar for major structural reinforcement.', link: '/products/deformed-rebar' },
-    { title: 'Galvanized Rebar', sub: '(Standard Grade)', desc: 'Galvanized rebar for major structural reinforcement.', link: '/products/galvanized-rebar' },
-    { title: 'Processed Rebar', sub: '(Standard Grade)', desc: 'Processed rebar for major structural reinforcement.', link: '/products/processed-rebar' },
+    { title: 'Rounded Rebar', sub: '(Standard Grade)', desc: 'Rounded rebar for major structural reinforcement.', link: '/roundedrebar' },
+    { title: 'Deformed Rebar', sub: '(Standard Grade)', desc: 'Deformed rebar for major structural reinforcement.', link: '/deformedrebar' },
+    { title: 'Galvanized Rebar', sub: '(Standard Grade)', desc: 'Galvanized rebar for major structural reinforcement.', link: '/galvrebar' },
+    { title: 'Processed Rebar', sub: '(Standard Grade)', desc: 'Processed rebar for major structural reinforcement.', link: '/procrebar' },
     ];
 
     return (

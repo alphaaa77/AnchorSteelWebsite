@@ -9,10 +9,10 @@ function Mesh() {
   const toggle = (i) => setExpandedIndex(expandedIndex === i ? null : i);
 
   const items = [
-    { title: 'Square Mesh', sub: '(6mm @ 200mm)', desc: 'General-purpose mesh for residential slabs and paths.' },
-    { title: 'Rectangular Mesh', sub: '(7mm @ 200mm)', desc: 'Heavier-duty mesh suitable for higher load areas.' },
-    { title: 'Trench Mesh', sub: '(8mm @ 200mm)', desc: 'Popular commercial option for slabs and pavements.' },
-    { title: 'Ezimesh (Square Mesh)', sub: '(9mm @ 200mm)', desc: 'Industrial-grade mesh for high-load applications.' },
+    { title: 'Square Mesh', sub: '(6mm @ 200mm)', desc: 'General-purpose mesh for residential slabs and paths.', link: '/squaremesh'},
+    { title: 'Rectangular Mesh', sub: '(7mm @ 200mm)', desc: 'Heavier-duty mesh suitable for higher load areas.', link: '/rectmesh' },
+    { title: 'Trench Mesh', sub: '(8mm @ 200mm)', desc: 'Popular commercial option for slabs and pavements.', link: '/trenchmesh' },
+    { title: 'Ezimesh (Square Mesh)', sub: '(9mm @ 200mm)', desc: 'Industrial-grade mesh for high-load applications.', link: '/ezimesh' },
   ];
 
     return (
