@@ -46,6 +46,11 @@ function Accessories() {
           <p>Tap a card to see details</p>
         </div>
       </header>
+            <nav className="breadcrumb">
+                <a href="/">Home</a><span>&gt;</span>
+                <a href="/products">Products</a><span>&gt;</span>
+                <span className="current">Accessories</span>
+            </nav>
 
       <div className="grid">
         {items.map((it, i) => (
