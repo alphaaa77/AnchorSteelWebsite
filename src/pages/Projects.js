@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import '../components/CSS files/Projects.css';
 import { Link } from 'react-router-dom';
-import frenchforest from '../assets/frenchforest/image1.jpg';
-import bunningstempe from '../assets/bunningstempe/image1.jpg';
+import frenchforest from '../assets/frenchforest/image01.jpg';
+import bunningstempe from '../assets/bunningstempe/image01.jpg';
 import arrowback from '../assets/arrow-back.png';
 import arrownext from '../assets/arrow-next.png';
 function Projects() {

@@ -135,8 +135,8 @@
 .variant-list { list-style: none; margin: 0; padding: 10px 14px; display: grid; gap: 8px; }
 .variant {
   display: grid;
-  grid-template-columns: 180px 200px 1fr; /* tweak widths to taste */
-  gap: 12px 40px;                          /* row gap, column gap */
+  grid-template-columns: 210px 200px 1fr; /* tweak widths to taste */
+  gap: 12px 45px;                          /* row gap, column gap */
   align-items: baseline;
 }
 

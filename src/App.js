@@ -9,7 +9,6 @@ import Products from './pages/Products';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import GetAQuote from './pages/GetAQuote';
-import CapStatement from './pages/CapStatement';
 
 import Rebar from './pages/products-pages/Rebar';
 import Mesh from './pages/products-pages/Mesh';
@@ -23,7 +22,6 @@ import ProcRebar from './pages/products-pages/rebar-pages/ProcRebar';
 import SquareMesh from './pages/products-pages/mesh-pages/SquareMesh';
 import RectMesh from './pages/products-pages/mesh-pages/RectMesh';
 import TrenchMesh from './pages/products-pages/mesh-pages/TrenchMesh';
-import Ezimesh from './pages/products-pages/mesh-pages/Ezimesh';
 
 import FrenchForest from './pages/projects-pages/frenchforest';
 import BunningsTempe from './pages/projects-pages/bunningstempe';
@@ -39,7 +37,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/capstatement" element={<CapStatement/>}/>
             {/* Products Pages */}
             <Route path="/rebar" element={<Rebar/>}/>
             <Route path="/mesh" element={<Mesh/>}/>
@@ -53,8 +50,8 @@ function App() {
             <Route path="/squaremesh" element={<SquareMesh/>}/>
             <Route path="/rectmesh" element={<RectMesh/>}/>
             <Route path="/trenchmesh" element={<TrenchMesh/>}/>
-            <Route path="/ezimesh" element={<Ezimesh/>}/>
 
+            {/* Project Pages */}
             <Route path="/projects/frenchforest" element={<FrenchForest/>}/>
             <Route path="/projects/bunningstempe" element={<BunningsTempe/>}/>
 
