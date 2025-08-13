@@ -52,7 +52,7 @@ function Contact() {
                     <div className="card-text">
                         <h3>Someone</h3>
                         <h3>Email:</h3>
-                        <p>info@anchorsteel.com.au</p>
+                        <p>someone@anchorsteel.com.au</p>
                         <h3>Phone:</h3>
                         <p>+123123123</p>
                     </div>

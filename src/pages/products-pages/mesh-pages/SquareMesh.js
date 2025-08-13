@@ -6,33 +6,58 @@ function SquareMesh() {
 
   const rows = [
     {
-      code: "SL82",
-      diameter: "6.5",
-      area: "33",
+      code: "SL72",
+      diameter: "7",
+      area: "200x200",
+      size: "6 x 2.4",
+      cover: "12.56",
+      kg: "41",
       variants: [
-        { length: "6m",  price: "$2.10 / m", availability: "In stock",                notes: "Great for ties and light reinforcement." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" }
+        { length: "6m",  price: "$2.10 / sheet", availability: "In stock",                notes: "Great for ties and light reinforcement." },
+      ]
+    },
+    {
+      code: "SL81",
+      diameter: "8",
+      area: "200x200",
+      size: "6 x 2.4",
+      cover: "12.56",
+      kg: "105",
+      variants: [
+        { length: "6m",  price: "$2.10 / sheet", availability: "In stock",                notes: "Great for ties and light reinforcement." },
+      ]
+    },
+    {
+      code: "SL82",
+      diameter: "8",
+      area: "200x200",
+      size: "6 x 2.4",
+      cover: "12.56",
+      kg: "52",
+      variants: [
+        { length: "6m",  price: "$2.10 / sheet", availability: "In stock",                notes: "Great for ties and light reinforcement." },
       ]
     },
     {
       code: "SL92",
-      diameter: "10",
-      area: "79",
+      diameter: "9",
+      area: "200x200",
+      size: "6 x 2.4",
+      cover: "12.56",
+      kg: "65",
       variants: [
-        { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" },
+        { length: "6m",  price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
       ]
     },
     {
       code: "SL102",
-      diameter: "12",
-      area: "113",
+      diameter: "10",
+      area: "200x200",
+      size: "6 x 2.4",
+      cover: "12.56",
+      kg: "80",
       variants: [
-        { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" },
+        { length: "6m",  price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
       ]
     },
   ];
@@ -64,7 +89,10 @@ function SquareMesh() {
           <tr>
             <th>Product Code</th>
             <th>Diameter (mm)</th>
-            <th>Cross Sectional Area (mm²)</th>
+            <th>Spacing (mm) (L x T)</th>
+            <th>Size (m)</th>
+            <th>Net Coverage (mm)</th>
+            <th>Weight (kg)</th>
             <th aria-hidden="true"></th> {/* chevron column */}
           </tr>
         </thead>
@@ -84,6 +112,9 @@ function SquareMesh() {
                   <td><strong>{r.code}</strong></td>
                   <td>{r.diameter}</td>
                   <td>{r.area}</td>
+                  <td>{r.size}</td>
+                  <td>{r.cover}</td>
+                  <td>{r.kg}</td>
                   {/* removed r.stock cell to match 4 headers */}
                   <td className="chev-cell">
                     <button
@@ -97,15 +128,13 @@ function SquareMesh() {
                     </button>
                   </td>
                 </tr>
-
                 {/* details row */}
                 <tr id={`details-${i}`} className={`details-row ${isOpen ? "show" : ""}`}>
                   {/* colspan must match number of <th> in thead */}
-                  <td colSpan={4}>
+                  <td colSpan={6}>
                     <ul className="variant-list">
                       {r.variants.map((v) => (
                         <li className="variant" key={v.length}>
-                          <span className="variant-length">{v.length}</span>
                           <span className="variant-item"><strong>Price:</strong> {v.price}</span>
                           <span className="variant-item"><strong>Availability:</strong> {v.availability}</span>
                           {v.notes && <span className="variant-item"><strong>Notes:</strong> {v.notes}</span>}

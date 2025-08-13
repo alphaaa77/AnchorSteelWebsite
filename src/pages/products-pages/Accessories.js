@@ -35,7 +35,7 @@ function Accessories() {
       price: '$XX per bag',
       quantity: '100 pcs / bag',
       desc: 'Safety caps for exposed bar ends on site.'
-    }
+    },
   ];
 
   return (

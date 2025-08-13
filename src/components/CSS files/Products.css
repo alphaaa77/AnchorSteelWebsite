@@ -98,8 +98,11 @@
 .prod-table th:first-child,
 .prod-table td:first-child { text-align: left; }   /* keep product code left */
 .prod-table th:nth-child(1), .prod-table td:nth-child(1) { width: 32%; }
-.prod-table th:nth-child(2), .prod-table td:nth-child(2) { width: 22%; }
-.prod-table th:nth-child(3), .prod-table td:nth-child(3) { width: 32%; }
+.prod-table th:nth-child(2), .prod-table td:nth-child(2) { width: 32%; }
+.prod-table th:nth-child(3), .prod-table td:nth-child(3) { width: 42%; }
+.prod-table th:nth-child(4), .prod-table td:nth-child(4) { width: 32%; }
+.prod-table th:nth-child(5), .prod-table td:nth-child(5) { width: 32%; }
+.prod-table th:nth-child(6), .prod-table td:nth-child(6) { width: 32%; }
 
 /* clearer row separators */
 :root { --table-border: #e2e8f0; }
@@ -132,11 +135,13 @@
 .variant-list { list-style: none; margin: 0; padding: 10px 14px; display: grid; gap: 8px; }
 .variant {
   display: grid;
-  grid-template-columns: 64px repeat(3, minmax(140px, 1fr));
-  align-items: baseline; gap: 6px 12px;
+  grid-template-columns: 180px 200px 1fr; /* tweak widths to taste */
+  gap: 12px 40px;                          /* row gap, column gap */
+  align-items: baseline;
 }
+
 .variant-length { font-weight: 700; white-space: nowrap; }
-.variant-item strong { margin-right: 6px; }
+.variant-item strong { margin-right: 10px; }
 
 /* ======= Hover/Readability ======= */
 .prod-row { cursor: pointer; }

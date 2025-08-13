@@ -118,7 +118,7 @@ function Main() {
             <div className="main-contact">
                 <h1>Get In Touch</h1>
                 <p>Have questions or want a quote? We're just a message away.</p>
-                <Link to="/contact">
+                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                     <button className="contact-btn">Contact Us</button>
                 </Link>
             </div>

@@ -7,62 +7,68 @@ function RectMesh() {
   const rows = [
     {
       code: "RL718",
-      diameter: "6.5",
-      area: "33",
+      diameter: "7",
+      area: "100x300",
+      size: "6 x 2.4",
+      cover: "10.82",
+      kg: "68",
       variants: [
-        { length: "6m",  price: "$2.10 / m", availability: "In stock",                notes: "Great for ties and light reinforcement." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" }
+        { price: "$2.10 / sheet", availability: "In stock",                notes: "Great for ties and light reinforcement." },
       ]
     },
     {
       code: "RL818",
-      diameter: "10",
-      area: "79",
+      diameter: "8",
+      area: "100x300",
+      size: "6 x 2.4",
+      cover: "10.82",
+      kg: "79",
       variants: [
-        { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" },
+        { price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
       ]
     },
     {
       code: "RL918",
-      diameter: "12",
-      area: "113",
+      diameter: "9",
+      area: "100x300",
+      size: "6 x 2.4",
+      cover: "10.82",
+      kg: "93",
       variants: [
-        { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" },
+        { price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
       ]
     },
     {
       code: "RL1018",
-      diameter: "12",
-      area: "113",
+      diameter: "10",
+      area: "100x300",
+      size: "6 x 2.4",
+      cover: "10.82",
+      kg: "109",
       variants: [
-        { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" },
+        { price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
       ]
     },
     {
       code: "RL1118",
-      diameter: "12",
-      area: "113",
+      diameter: "11",
+      area: "100x300",
+      size: "6 x 2.4",
+      cover: "10.82",
+      kg: "131",
       variants: [
-        { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" },
+        { price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
       ]
     },
     {
       code: "RL1218",
       diameter: "12",
-      area: "113",
+      area: "100x300",
+      size: "6 x 2.4",
+      cover: "10.82",
+      kg: "157",
       variants: [
-        { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-        { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-        { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" },
+        { price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
       ]
     },
   ];
@@ -91,9 +97,12 @@ function RectMesh() {
         <table className="prod-table">
           <thead>
             <tr>
-              <th>Product Code</th>
-              <th>Diameter (mm)</th>
-              <th>Cross Sectional Area (mm²)</th>
+            <th>Product Code</th>
+            <th>Diameter (mm)</th>
+            <th>Spacing (mm) (L x T)</th>
+            <th>Size (m)</th>
+            <th>Net Coverage (mm)</th>
+            <th>Weight (kg)</th>
               <th aria-hidden="true"></th> {/* chevron column */}
             </tr>
           </thead>
@@ -113,6 +122,9 @@ function RectMesh() {
                     <td><strong>{r.code}</strong></td>
                     <td>{r.diameter}</td>
                     <td>{r.area}</td>
+                    <td>{r.size}</td>
+                    <td>{r.cover}</td>
+                    <td>{r.kg}</td>
                     {/* removed r.stock cell to match 4 headers */}
                     <td className="chev-cell">
                       <button
@@ -130,11 +142,10 @@ function RectMesh() {
                   {/* details row */}
                   <tr id={`details-${i}`} className={`details-row ${isOpen ? "show" : ""}`}>
                     {/* colspan must match number of <th> in thead */}
-                    <td colSpan={4}>
+                    <td colSpan={6}>
                       <ul className="variant-list">
                         {r.variants.map((v) => (
                           <li className="variant" key={v.length}>
-                            <span className="variant-length">{v.length}</span>
                             <span className="variant-item"><strong>Price:</strong> {v.price}</span>
                             <span className="variant-item"><strong>Availability:</strong> {v.availability}</span>
                             {v.notes && <span className="variant-item"><strong>Notes:</strong> {v.notes}</span>}

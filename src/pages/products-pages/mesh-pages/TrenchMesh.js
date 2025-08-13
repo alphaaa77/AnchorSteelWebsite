@@ -7,8 +7,10 @@ function TrenchMesh() {
   const rows = [
     {
       code: "L08TM3W",
-      diameter: "6.5",
-      area: "33",
+      diameter: "8",
+      area: "300",
+      size: "6 x 0.2",
+      kg: "7",
       variants: [
         { length: "6m",  price: "$2.10 / m", availability: "In stock",                notes: "Great for ties and light reinforcement." },
         { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
@@ -17,8 +19,10 @@ function TrenchMesh() {
     },
     {
       code: "L11TM4W",
-      diameter: "10",
-      area: "79",
+      diameter: "11",
+      area: "400",
+      size: "6 x 0.3",
+      kg: "18",
       variants: [
         { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
         { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
@@ -28,7 +32,9 @@ function TrenchMesh() {
     {
       code: "L12TM4",
       diameter: "12",
-      area: "113",
+      area: "400",
+      size: "6 x 2",
+      kg: "1",
       variants: [
         { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
         { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
@@ -62,8 +68,10 @@ function TrenchMesh() {
           <thead>
             <tr>
               <th>Product Code</th>
-              <th>Diameter (mm)</th>
-              <th>Cross Sectional Area (mm²)</th>
+              <th>Wire Diameter (mm)</th>
+              <th>No. Of Wires</th>
+              <th>Width</th>
+              <th>Weight (Kg)</th>
               <th aria-hidden="true"></th> {/* chevron column */}
             </tr>
           </thead>
@@ -83,6 +91,8 @@ function TrenchMesh() {
                     <td><strong>{r.code}</strong></td>
                     <td>{r.diameter}</td>
                     <td>{r.area}</td>
+                    <td>{r.size}</td>
+                    <td>{r.kg}</td>
                     {/* removed r.stock cell to match 4 headers */}
                     <td className="chev-cell">
                       <button
@@ -100,7 +110,7 @@ function TrenchMesh() {
                   {/* details row */}
                   <tr id={`details-${i}`} className={`details-row ${isOpen ? "show" : ""}`}>
                     {/* colspan must match number of <th> in thead */}
-                    <td colSpan={4}>
+                    <td colSpan={6}>
                       <ul className="variant-list">
                         {r.variants.map((v) => (
                           <li className="variant" key={v.length}>
