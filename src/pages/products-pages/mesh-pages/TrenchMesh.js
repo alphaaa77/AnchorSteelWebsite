@@ -6,7 +6,7 @@ function TrenchMesh() {
 
   const rows = [
     {
-      code: "SL82",
+      code: "L08TM3W",
       diameter: "6.5",
       area: "33",
       variants: [
@@ -16,7 +16,7 @@ function TrenchMesh() {
       ]
     },
     {
-      code: "SL92",
+      code: "L11TM4W",
       diameter: "10",
       area: "79",
       variants: [
@@ -26,7 +26,7 @@ function TrenchMesh() {
       ]
     },
     {
-      code: "SL102",
+      code: "L12TM4",
       diameter: "12",
       area: "113",
       variants: [
@@ -52,72 +52,74 @@ function TrenchMesh() {
         <span className="current">Trench Mesh</span>
       </nav>
 
-      <p style={{fontFamily: 'Poppins, sans-serif'}}>
+      <p className="product-intro" style={{fontFamily: 'Poppins, sans-serif'}}>
         Et ea mollit sint reprehenderit quis exercitation tempor ullamco laborum aute reprehenderit do sint
         excepteur. Duis consectetur commodo qui cupidatat esse consequat. Mollit irure proident ullamco dolor est
         et mollit consequat nulla id dolor ut aute.
       </p>
+      <div className="prod-table-wrap">
+        <table className="prod-table">
+          <thead>
+            <tr>
+              <th>Product Code</th>
+              <th>Diameter (mm)</th>
+              <th>Cross Sectional Area (mm²)</th>
+              <th aria-hidden="true"></th> {/* chevron column */}
+            </tr>
+          </thead>
 
-      <table className="prod-table">
-        <thead>
-          <tr>
-            <th>Product Code</th>
-            <th>Diameter (mm)</th>
-            <th>Cross Sectional Area (mm²)</th>
-            <th aria-hidden="true"></th> {/* chevron column */}
-          </tr>
-        </thead>
+          <tbody>
+            {rows.map((r, i) => {
+              const isOpen = openRow === i;
+              return (
+                <React.Fragment key={r.code}>
+                  {/* main row */}
+                  <tr
+                    className={`prod-row ${isOpen ? "open" : ""}`}
+                    onClick={(e) => {
+                      if (!e.target.closest('.row-toggle')) toggleRow(i);
+                    }}
+                  >
+                    <td><strong>{r.code}</strong></td>
+                    <td>{r.diameter}</td>
+                    <td>{r.area}</td>
+                    {/* removed r.stock cell to match 4 headers */}
+                    <td className="chev-cell">
+                      <button
+                        className="row-toggle"
+                        onClick={() => toggleRow(i)}
+                        aria-expanded={isOpen}
+                        aria-controls={`details-${i}`}
+                        title={isOpen ? "Hide details" : "Show details"}
+                      >
+                        <span className="chev">▾</span>
+                      </button>
+                    </td>
+                  </tr>
 
-        <tbody>
-          {rows.map((r, i) => {
-            const isOpen = openRow === i;
-            return (
-              <React.Fragment key={r.code}>
-                {/* main row */}
-                <tr
-                  className={`prod-row ${isOpen ? "open" : ""}`}
-                  onClick={(e) => {
-                    if (!e.target.closest('.row-toggle')) toggleRow(i);
-                  }}
-                >
-                  <td><strong>{r.code}</strong></td>
-                  <td>{r.diameter}</td>
-                  <td>{r.area}</td>
-                  {/* removed r.stock cell to match 4 headers */}
-                  <td className="chev-cell">
-                    <button
-                      className="row-toggle"
-                      onClick={() => toggleRow(i)}
-                      aria-expanded={isOpen}
-                      aria-controls={`details-${i}`}
-                      title={isOpen ? "Hide details" : "Show details"}
-                    >
-                      <span className="chev">▾</span>
-                    </button>
-                  </td>
-                </tr>
+                  {/* details row */}
+                  <tr id={`details-${i}`} className={`details-row ${isOpen ? "show" : ""}`}>
+                    {/* colspan must match number of <th> in thead */}
+                    <td colSpan={4}>
+                      <ul className="variant-list">
+                        {r.variants.map((v) => (
+                          <li className="variant" key={v.length}>
+                            <span className="variant-length">{v.length}</span>
+                            <span className="variant-item"><strong>Price:</strong> {v.price}</span>
+                            <span className="variant-item"><strong>Availability:</strong> {v.availability}</span>
+                            {v.notes && <span className="variant-item"><strong>Notes:</strong> {v.notes}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    </td>
+                  </tr>
+                </React.Fragment>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
 
-                {/* details row */}
-                <tr id={`details-${i}`} className={`details-row ${isOpen ? "show" : ""}`}>
-                  {/* colspan must match number of <th> in thead */}
-                  <td colSpan={4}>
-                    <ul className="variant-list">
-                      {r.variants.map((v) => (
-                        <li className="variant" key={v.length}>
-                          <span className="variant-length">{v.length}</span>
-                          <span className="variant-item"><strong>Price:</strong> {v.price}</span>
-                          <span className="variant-item"><strong>Availability:</strong> {v.availability}</span>
-                          {v.notes && <span className="variant-item"><strong>Notes:</strong> {v.notes}</span>}
-                        </li>
-                      ))}
-                    </ul>
-                  </td>
-                </tr>
-              </React.Fragment>
-            );
-          })}
-        </tbody>
-      </table>
     </div>
   );
 }

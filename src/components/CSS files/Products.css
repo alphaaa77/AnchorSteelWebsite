@@ -29,23 +29,24 @@
 /* overlay should cover the whole header */
 .products-header-overlay {
   position: absolute;
-  inset: 0;                         /* top/right/bottom/left: 0 */
-  color: #fff;
-  background: rgba(43, 43, 43, 0.4);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background: rgba(48, 48, 48, 0.4);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  transform: translateX(-3%);
   text-align: center;
-  padding: 15px;
+  padding: 0; /* remove extra padding */
+  overflow: hidden;
   z-index: 2;
-
-  /* remove these old constraints */
-  /* max-width: 91%; */
-  /* margin-top: -30px; */
 }
 
-.products-header-overlay h1 { font-size: 4.5rem; margin-bottom: 10px; }
+.products-header-overlay h1 { font-size: 4.5rem; margin-bottom: 65px; }
 .products-header-overlay p  { font-size: 1.7rem; max-width: 600px; color: aliceblue; }
 
 /* ===== Breadcrumb + intro ===== */
@@ -145,4 +146,32 @@
 @media (max-width: 700px) {
   .variant { grid-template-columns: 64px 1fr; }
   .variant-item { grid-column: 2 / -1; }
+}
+/* ====== Accessory Details ======*/
+.card-details {
+  margin-top: 10px;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  row-gap: 8px;
+  column-gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+/* allow each row to align nicely without extra wrappers */
+.kv div { display: contents; }
+
+.kv dt {
+  font-weight: 600;
+  color: #374151;
+}
+
+.kv dd {
+  margin: 0;
+  color: #111827;
 }

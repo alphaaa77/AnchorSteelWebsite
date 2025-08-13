@@ -27,7 +27,7 @@ function Products() {
           <img src={placeholder} alt="Rebar" />
           <div className="card-text">
             <h2>Rebar</h2>
-            <p>(N12, N16 etc.)</p>
+            <p>(Round, Deformed, Galvanized, Processed.)</p>
             {expandedIndex === 0 && (
               <>
                 <p className="card-details">
@@ -53,7 +53,7 @@ function Products() {
           <img src={placeholder} alt="Mesh" />
           <div className="card-text">
             <h2>Mesh</h2>
-            <p>(SL62, SL92 etc.)</p>
+            <p>(Square Mesh, Rectangular Mesh, Trench Mesh)</p>
             {expandedIndex === 1 && (
               <>
                 <p className="card-details">
@@ -79,6 +79,7 @@ function Products() {
           <img src={placeholder} alt="Accessories" />
           <div className="card-text">
             <h2>Accessories</h2>
+            <p>Various accessories</p>
             {expandedIndex === 2 && (
               <>
                 <p className="card-details">

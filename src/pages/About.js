@@ -23,9 +23,11 @@ function About() {
             <section className="core-values">
                 <h2>Our Values</h2>
                 <ul>
-                    <li><strong>Quality:</strong> We ensure every product meets industry standards.</li>
-                    <li><strong>Reliability:</strong> On-time delivery, every time.</li>
-                    <li><strong>Support:</strong> Dedicated team helping your projects succeed.</li>
+                    <li><strong>Quality First:</strong>We deliver products and workmanship that meet or exceed
+                        Australian Standards, ensuring durability and performance in every build.</li>
+                    <li><strong>Reliability:</strong>We pride ourselves on timely delivery, transparent communication,and consistent project outcomes.</li>
+                    <li><strong>Health & Safety:</strong>We prioritise the well-being of our people, clients, and the
+community, maintaining strict safety protocols across all operations.</li>
                 </ul>
             </section>
 

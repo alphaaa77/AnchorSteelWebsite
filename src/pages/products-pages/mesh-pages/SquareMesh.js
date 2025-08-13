@@ -52,12 +52,13 @@ function SquareMesh() {
         <span className="current">Square Mesh</span>
       </nav>
 
-      <p style={{fontFamily: 'Poppins, sans-serif'}}>
+      <p className="product-intro" style={{fontFamily: 'Poppins, sans-serif'}}>
         Et ea mollit sint reprehenderit quis exercitation tempor ullamco laborum aute reprehenderit do sint
         excepteur. Duis consectetur commodo qui cupidatat esse consequat. Mollit irure proident ullamco dolor est
         et mollit consequat nulla id dolor ut aute.
       </p>
 
+<div className="prod-table-wrap">
       <table className="prod-table">
         <thead>
           <tr>
@@ -118,6 +119,8 @@ function SquareMesh() {
           })}
         </tbody>
       </table>
+</div>
+
     </div>
   );
 }

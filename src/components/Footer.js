@@ -54,7 +54,10 @@ function Footer() {
                   Terms &amp; Conditions
                 </a>
               </li>
-              <li><a href="/capstatement">Mission Statement</a></li>
+              <li><a href="/files/Anchor-Steel-Capability-Statement-V1.pdf" target="_blank" rel="noopener noreferrer">
+                  Capability Statement
+                  </a>
+              </li>
             </ul>
           </div>
         </div>
