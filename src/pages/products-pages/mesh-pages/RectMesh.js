@@ -21,17 +21,17 @@ function SquareMesh() {
   }, []);
 
   const rows = [
-    { code: "RL718",  diameter: "7",  area: "100x300", size: "6 x 2.4", cover: "12.56", kg: "41",
+    { code: "RL718",  diameter: "7 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "68",
       variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "Great for ties and light reinforcement." }] },
-    { code: "RL818",  diameter: "8",  area: "100x300", size: "6 x 2.4", cover: "12.56", kg: "105",
+    { code: "RL818",  diameter: "8 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "79",
       variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
-    { code: "RL918",  diameter: "8",  area: "100x300", size: "6 x 2.4", cover: "12.56", kg: "52",
+    { code: "RL918",  diameter: "9 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "93",
       variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
-    { code: "RL1018",  diameter: "9",  area: "100x300", size: "6 x 2.4", cover: "12.56", kg: "65",
+    { code: "RL1018",  diameter: "10 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "109",
       variants: [{ price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." }] },
-    { code: "RL1118", diameter: "10", area: "100x300", size: "6 x 2.4", cover: "12.56", kg: "80",
+    { code: "RL1118", diameter: "11 x 7", area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "131",
       variants: [{ price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "" }] },
-    { code: "RL1218", diameter: "10", area: "100x300", size: "6 x 2.4", cover: "12.56", kg: "80",
+    { code: "RL1218", diameter: "12 x 7", area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "157",
       variants: [{ price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "" }] },
   ];
 
@@ -52,15 +52,20 @@ const pick = (code) => {
   return (
     <div className="section">
       <header className="products-animated-header">
-        <div className="products-header-overlay"><h1>Square Mesh</h1></div>
+        <div className="products-header-overlay"><h1>Rectangular Mesh</h1></div>
       </header>
 
       <nav className="breadcrumb">
         <a href="/">Home</a><span>&gt;</span>
         <a href="/products">Products</a><span>&gt;</span>
         <a href="/mesh">Mesh</a><span>&gt;</span>
-        <span className="current">Square Mesh</span>
+        <span className="current">Rectangular Mesh</span>
       </nav>
+      
+      <h3 className="product-intro">
+        Ipsum consectetur nostrud nostrud laboris minim mollit commodo tempor in. 
+        Commodo anim incididunt consectetur eu Lorem dolor in deserunt. 
+        </h3>
 
       {!!loadError && <div className="error-banner">Failed to load live data: {loadError}</div>}
 
@@ -69,7 +74,7 @@ const pick = (code) => {
           <thead>
             <tr>
               <th>Product Code</th>
-              <th>Diameter (mm)</th>
+              <th>Diameter (mm) (L x T)</th>
               <th>Spacing (mm) (L x T)</th>
               <th>Size (m)</th>
               <th>Net Coverage (m²)</th>

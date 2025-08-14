@@ -60,6 +60,11 @@ const pick = (code) => {
         <span className="current">Square Mesh</span>
       </nav>
 
+      <h3 className="product-intro">
+        Ipsum consectetur nostrud nostrud laboris minim mollit commodo tempor in. 
+        Commodo anim incididunt consectetur eu Lorem dolor in deserunt. 
+        </h3>
+
       {!!loadError && <div className="error-banner">Failed to load live data: {loadError}</div>}
 
       <div className="prod-table-wrap">

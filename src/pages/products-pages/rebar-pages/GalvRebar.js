@@ -89,6 +89,11 @@ function GalvRebar() {
         <span className="current">Round Bar - Grade R250N</span>
       </nav>
 
+      <h3 className="product-intro">
+        Ipsum consectetur nostrud nostrud laboris minim mollit commodo tempor in. 
+        Commodo anim incididunt consectetur eu Lorem dolor in deserunt. 
+        </h3>
+
       {!!loadError && <div className="error-banner">Failed to load live data: {loadError}</div>}
 
       <div className="prod-table-wrap">

@@ -21,11 +21,11 @@ function SquareMesh() {
   }, []);
 
   const rows = [
-    { code: "L08TM3W",  diameter: "7",  area: "100x300", size: "6 x 2.4", kg: "41",
+    { code: "L08TM3W",  diameter: "7",  area: "300", size: "6 x 0.2", kg: "41",
       variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "Great for ties and light reinforcement." }] },
-    { code: "L11TM4W",  diameter: "8",  area: "100x300", size: "6 x 2.4", kg: "105",
+    { code: "L11TM4W",  diameter: "8",  area: "300", size: "6 x 0.3", kg: "105",
       variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
-    { code: "L12TM4",  diameter: "8",  area: "100x300", size: "6 x 2.4", kg: "52",
+    { code: "L12TM4",  diameter: "8",  area: "300", size: "6 x 2", kg: "52",
       variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
   ];
 
@@ -46,15 +46,20 @@ const pick = (code) => {
   return (
     <div className="section">
       <header className="products-animated-header">
-        <div className="products-header-overlay"><h1>Square Mesh</h1></div>
+        <div className="products-header-overlay"><h1>Trench Mesh</h1></div>
       </header>
 
       <nav className="breadcrumb">
         <a href="/">Home</a><span>&gt;</span>
         <a href="/products">Products</a><span>&gt;</span>
         <a href="/mesh">Mesh</a><span>&gt;</span>
-        <span className="current">Square Mesh</span>
+        <span className="current">Trench Mesh</span>
       </nav>
+
+      <h3 className="product-intro">
+        Ipsum consectetur nostrud nostrud laboris minim mollit commodo tempor in. 
+        Commodo anim incididunt consectetur eu Lorem dolor in deserunt. 
+        </h3>
 
       {!!loadError && <div className="error-banner">Failed to load live data: {loadError}</div>}
 
