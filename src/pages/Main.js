@@ -4,6 +4,7 @@ import '../App.css';
 import '../components/CSS files/Main.css';
 import mainpic from '../assets/anchorsteelshow.jpg';
 import cutandbent from '../assets/cutandbent.JPG';
+import mondaalogo from '../assets/partneredcomps/MondaaGroup.png';
 import frenchforest from '../assets/frenchforest/image1.jpg';
 import bunningstempe from '../assets/bunningstempe/image1.jpg';
 import placeholder from '../assets/placeholder.jpg';
@@ -44,25 +45,49 @@ function Main() {
                     Proud partners with these companies!
                 </h2>
                 <div className="logo-track">
+                    {/* Original Partnered Companies */}
                     <img src={sslogo} alt="Partner 1" />
-                    <img src={sslogo} alt="Partner 2" />
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 2" />
+                    </a>
                     <img src={sslogo} alt="Partner 3" />
-                    <img src={sslogo} alt="Partner 4" />
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 4" />
+                    </a>
+                    {/*********************/}
 
+                    {/* Duplicate Group 1 */}
                     <img src={sslogo} alt="Partner 1 duplicate" />
-                    <img src={sslogo} alt="Partner 2 duplicate" />
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 2" />
+                    </a>
                     <img src={sslogo} alt="Partner 3 duplicate" />
-                    <img src={sslogo} alt="Partner 4 duplicate" />
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 4" />
+                    </a>
+                    {/*********************/}
 
+                    {/* Duplicate Group 2 */}
                     <img src={sslogo} alt="Partner 1 duplicate" />
-                    <img src={sslogo} alt="Partner 2 duplicate" />
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 2" />
+                    </a>
                     <img src={sslogo} alt="Partner 3 duplicate" />
-                    <img src={sslogo} alt="Partner 4 duplicate" />
-                    
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 4" />
+                    </a>
+                    {/*********************/}
+
+                    {/* Duplicate Group 3 */}
                     <img src={sslogo} alt="Partner 1 duplicate" />
-                    <img src={sslogo} alt="Partner 2 duplicate" />
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 2" />
+                    </a>
                     <img src={sslogo} alt="Partner 3 duplicate" />
-                    <img src={sslogo} alt="Partner 4 duplicate" />
+                    <a href ="https://mondaa.com.au/" target="_blank" rel="noopener noreferrer">
+                        <img src={mondaalogo} alt="Partner 4" />
+                    </a>
+                    {/*********************/}
                 </div>
             </div>
             
