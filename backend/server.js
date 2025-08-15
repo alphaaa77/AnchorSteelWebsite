@@ -40,8 +40,7 @@ app.get('/api/prices/rebar', async (_req, res) => {
       SELECT
         product_code,
         sixm_price,  ninem_price,  twelvem_price,
-        sixm_avail,  ninem_avail,  twelvem_avail,
-        notes
+        sixm_avail,  ninem_avail,  twelvem_avail
       FROM logbooks.rebar_details
       ORDER BY product_code
     `);
@@ -83,5 +82,51 @@ app.get('/api/prices/accessory', async (_req, res) => {
     res.status(500).json({ error: 'Database query failed' });
   }
 });
+
+// Contact Form Post command
+app.post('/api/inquiries', async (req, res) => {
+  try {
+    const { firstname, lastname, email, message } = req.body || {};
+
+    // Basic validation
+    const str = (v) => (typeof v === 'string' ? v.trim() : '');
+    const fn = str(firstname);
+    const ln = str(lastname);
+    const em = str(email);
+    const msg = str(message);
+
+    if (!fn || !ln || !em || !msg) {
+      return res.status(400).json({ error: 'All fields are required.' });
+    }
+    // Very basic email check
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) {
+      return res.status(400).json({ error: 'Invalid email address.' });
+    }
+    // Length guards (must match your DB column sizes)
+    if (fn.length > 100 || ln.length > 100 || em.length > 200 || msg.length > 5000) {
+      return res.status(400).json({ error: 'One or more fields are too long.' });
+    }
+
+    // Parameterized insert (submitted_at uses DB default NOW())
+    const { rows } = await pool.query(
+      `
+      INSERT INTO logbooks.inquiries (firstname, lastname, email, message)
+      VALUES ($1, $2, $3, $4)
+      RETURNING id, submitted_at
+      `,
+      [fn, ln, em, msg]
+    );
+
+    return res.status(201).json({
+      ok: true,
+      id: rows[0]?.id,
+      submitted_at: rows[0]?.submitted_at
+    });
+  } catch (e) {
+    console.error('Insert inquiry failed:', e);
+    return res.status(500).json({ error: 'Failed to submit inquiry.' });
+  }
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`API running on http://localhost:${PORT}`));

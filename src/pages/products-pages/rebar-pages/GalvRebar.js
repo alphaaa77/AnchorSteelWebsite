@@ -31,24 +31,24 @@ function GalvRebar() {
   // Change or add values here as needed, these are the hard-coded values
   const rows = [
     { code: "N12G", diameter: "6.5", area: "33", variants: [
-      { length: "6m",  price: "$2.10 / m", availability: "In stock",                notes: "Great for ties and light reinforcement." },
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",       notes: "" },
-      { length: "12m", price: "$4.20 / m", availability: "In stock",                notes: "" }
+      { length: "6m",  price: "$2.10 / m", availability: "In stock"},
+      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
+      { length: "12m", price: "$4.20 / m", availability: "In stock"}
     ]},
     { code: "N16G", diameter: "10", area: "79", variants: [
-      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",        notes: "" },
-      { length: "12m", price: "$4.20 / m", availability: "In stock",                 notes: "" },
+      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d"},
+      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
+      { length: "12m", price: "$4.20 / m", availability: "In stock"},
     ]},
     { code: "N20G", diameter: "12", area: "113", variants: [
-      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",        notes: "" },
-      { length: "12m", price: "$4.20 / m", availability: "In stock",                 notes: "" },
+      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d"},
+      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
+      { length: "12m", price: "$4.20 / m", availability: "In stock"},
     ]},
     { code: "N24G", diameter: "16", area: "201", variants: [
-      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." },
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days",        notes: "" },
-      { length: "12m", price: "$4.20 / m", availability: "In stock",                 notes: "" },
+      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d"},
+      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
+      { length: "12m", price: "$4.20 / m", availability: "In stock"},
     ]},
   ];
 
@@ -146,16 +146,12 @@ function GalvRebar() {
                             const live = pick(r.code, v.length);
                             const price = live?.price ?? v.price;
                             const availability = live?.availability ?? v.availability;
-                            const notes = (live?.notes ?? v.notes)?.trim();
 
                             return (
                               <li className="variant" key={v.length}>
                                 <span className="variant-length">{v.length}</span>
                                 <span className="variant-item"><strong>Price:</strong> {safe(price)}</span>
                                 <span className="variant-item"><strong>Availability:</strong> {safe(availability)}</span>
-                                {safe(notes, '') && (
-                                  <span className="variant-item"><strong>Notes:</strong> {notes}</span>
-                                )}
                               </li>
                             );
                           })}
