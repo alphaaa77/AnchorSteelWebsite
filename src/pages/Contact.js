@@ -30,7 +30,7 @@ function Contact() {
     setStatus({ state: 'loading', msg: 'Submitting…' });
 
     try {
-      const res = await fetch('/api/inquiries', {
+      const res = await fetch('http://localhost:5000/api/inquiries', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -46,7 +46,7 @@ function Contact() {
         throw new Error(err.error || `Request failed (${res.status})`);
       }
 
-      setStatus({ state: 'success', msg: 'Thanks! We received your inquiry.' });
+      setStatus({ state: 'success', msg: 'Thanks! We received your inquiry. Please allow for 1-2 business days for us to get back to you :)' });
       setForm({ firstname: '', lastname: '', email: '', message: '', company: '' });
     } catch (err) {
       setStatus({ state: 'error', msg: err.message || 'Something went wrong.' });
@@ -151,7 +151,44 @@ function Contact() {
         </div>
       </div>
 
-      {/* …the rest of your cards … */}
+      <div className="grid"> 
+        <div className="vertical-card"> 
+            <div className="card-text"> 
+                <h3>Someone</h3> 
+                <h3>Email:</h3> 
+                <p>someone@anchorsteel.com.au</p> 
+                <h3>Phone:</h3> <p>+123123123</p> 
+            </div> 
+        </div> 
+            <div className="vertical-card"> 
+                <div className="card-text"> 
+                    <h3>Someone 2</h3> 
+                    <h3>Email:</h3> 
+                    <p>someone2@anchorsteel.com.au</p> 
+                    <h3>Phone:</h3> 
+                    <p>+123123123</p> 
+                </div> 
+            </div> 
+
+            <div className="vertical-card"> 
+                <div className="card-text"> 
+                    <h3>Someone 3</h3> 
+                    <h3>Email:</h3> 
+                    <p>someone3@anchorsteel.com.au</p> 
+                    <h3>Phone:</h3> 
+                    <p>+123123123</p> 
+                </div>
+            </div> 
+            <div className="vertical-card"> 
+                <div className="card-text"> 
+                    <h3>Someone 4</h3> 
+                    <h3>Email:</h3> 
+                    <p>someone4@anchorsteel.com.au</p> 
+                    <h3>Phone:</h3> 
+                    <p>+123123123</p>
+                </div> 
+            </div> 
+        </div> 
     </div>
   );
 }
