@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: 80% 45%;
   background-repeat: no-repeat;
-  animation: zoomInBackground 7s ease-out forwards;
+  animation: aboutZoom 7s ease-out forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
   margin-left: calc(-50vw + 50%);
 }
 
-@keyframes zoomInBackground {
+@keyframes aboutZoom {
   0% {
     background-size: 100%;
   }

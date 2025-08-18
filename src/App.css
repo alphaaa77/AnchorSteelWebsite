@@ -110,3 +110,11 @@ p{
 .carousel-btn:hover{
   transform: scale(1.2);
 }
+@keyframes zoomInBackground {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}

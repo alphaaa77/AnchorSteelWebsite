@@ -45,6 +45,12 @@ function Services() {
       desc: 'More info coming soon',
       img: placeholder,
       details: 'Placeholder text',
+    },
+    {
+      title: 'Pre-fabricated steel',
+      desc: 'More info coming soon',
+      img: placeholder,
+      details: 'Placeholder text',
     }
   ];
 

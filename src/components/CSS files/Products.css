@@ -15,15 +15,19 @@
   background-position: center;      /* nicer default than 80% 45% */
   background-repeat: no-repeat;
 
-  animation: zoomInBackground 7s ease-out forwards;
+  animation: productZoom 7s ease-out forwards;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@keyframes zoomInBackground {
-  0%   { background-size: cover; }  /* start at cover */
-  100% { background-size: 115%; }   /* gentle zoom */
+@keyframes productZoom {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
 }
 
 /* overlay should cover the whole header */

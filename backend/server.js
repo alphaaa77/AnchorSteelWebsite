@@ -17,7 +17,6 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Connect to Postgres (DATABASE_URL or individual fields via .env)
 const pool = new Pool(
   process.env.DATABASE_URL
     ? {
@@ -25,9 +24,9 @@ const pool = new Pool(
         ssl: process.env.PGSSL === 'true' ? { rejectUnauthorized: false } : false,
       }
     : {
-        host: process.env.PGHOST,      // e.g. kangaroo.c90m6s...ap-southeast-2.rds.amazonaws.com
+        host: process.env.PGHOST,    
         port: Number(process.env.PGPORT || 5432),
-        user: process.env.PGUSER,      // e.g. postgres
+        user: process.env.PGUSER,   
         password: process.env.PGPASSWORD,
         database: process.env.PGDATABASE,
         ssl: process.env.PGSSL === 'true' ? { rejectUnauthorized: false } : false,
@@ -89,7 +88,6 @@ app.post("/api/inquiries", async (req, res) => {
   try {
     const { firstname, lastname, email, message, captcha } = req.body || {};
 
-    // ✅ Step 1: Verify captcha
     if (!captcha) {
       return res.status(400).json({ error: "Captcha required." });
     }
@@ -111,7 +109,6 @@ app.post("/api/inquiries", async (req, res) => {
       });
 }
 
-    // ✅ Step 2: Proceed with your existing logic
     const str = (v) => (typeof v === "string" ? v.trim() : "");
     const fn = str(firstname);
     const ln = str(lastname);
