@@ -1,5 +1,6 @@
 // Contact.jsx
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import '../App.css';
 import '../components/CSS files/Contact.css';
 import placeholder from '../assets/placeholder.jpg';
@@ -10,9 +11,10 @@ function Contact() {
     lastname: '',
     email: '',
     message: '',
-    company: '' // honeypot (should stay empty)
+    company: ''
   });
   const [status, setStatus] = useState({ state: 'idle', msg: '' });
+  const [captchaToken, setCaptchaToken] = useState(null);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -21,12 +23,18 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (form.company) {
-      // bot filled honeypot; pretend success
       setStatus({ state: 'success', msg: 'Thanks, your message was sent.' });
       setForm({ firstname: '', lastname: '', email: '', message: '', company: '' });
       return;
     }
+
+    if (!captchaToken) {
+      setStatus({ state: 'error', msg: 'Please complete the CAPTCHA.' });
+      return;
+    }
+
     setStatus({ state: 'loading', msg: 'Submitting…' });
 
     try {
@@ -37,8 +45,9 @@ function Contact() {
           firstname: form.firstname.trim(),
           lastname: form.lastname.trim(),
           email: form.email.trim(),
-          message: form.message.trim()
-        })
+          message: form.message.trim(),
+          captcha: captchaToken, // pass captcha to backend
+        }),
       });
 
       if (!res.ok) {
@@ -46,8 +55,12 @@ function Contact() {
         throw new Error(err.error || `Request failed (${res.status})`);
       }
 
-      setStatus({ state: 'success', msg: 'Thanks! We received your inquiry. Please allow for 1-2 business days for us to get back to you :)' });
+      setStatus({
+        state: 'success',
+        msg: 'Thanks! We received your inquiry. Please allow 1-2 business days for us to get back to you :)',
+      });
       setForm({ firstname: '', lastname: '', email: '', message: '', company: '' });
+      setCaptchaToken(null);
     } catch (err) {
       setStatus({ state: 'error', msg: err.message || 'Something went wrong.' });
     }
@@ -124,16 +137,20 @@ function Contact() {
               maxLength={5000}
             ></textarea>
 
-            <button type="submit" disabled={status.state === 'loading'}>
-              {status.state === 'loading' ? 'Submitting…' : 'Submit'}
-            </button>
-
             {status.state === 'error' && (
               <p style={{ marginTop: 8, color: 'crimson' }}>{status.msg}</p>
             )}
             {status.state === 'success' && (
               <p style={{ marginTop: 8, color: 'seagreen' }}>{status.msg}</p>
             )}
+                  <ReCAPTCHA
+              sitekey="6Lc0ZqkrAAAAALrQlbXyw7Qd5rmAov7QRyf2CgD-"
+              onChange={(token) => setCaptchaToken(token)}
+            />
+
+            <button type="submit" disabled={status.state === 'loading'}>
+                {status.state === 'loading' ? 'Submitting…' : 'Submit'}
+            </button>
           </form>
 
           <div className="contact-info-card">

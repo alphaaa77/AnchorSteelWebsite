@@ -40,7 +40,7 @@
   text-align: center;
   padding: 0; /* remove extra padding */
   overflow: hidden;
-  z-index: 2;/* just to be sure it's on top */
+  z-index: 2;
 }
 
 .about-us {
@@ -56,12 +56,6 @@
   margin-bottom: 20px;
   color: #ffffff;
   text-align: center;
-  -webkit-text-stroke: 1.3px #000E99; 
-  text-shadow: 
-    -1px -1px 0 black,  
-     1px -1px 0 black,  
-    -1px  1px 0 black,  
-     1px  1px 0 black;
 }
 
 .about-us header p {

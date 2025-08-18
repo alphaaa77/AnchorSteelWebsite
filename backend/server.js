@@ -1,5 +1,6 @@
 // server.js (ESM)
 // npm i express pg cors dotenv
+import fetch from 'node-fetch';
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
@@ -11,7 +12,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000', // React dev
-    // 'https://yourdomain.com', // add prod domain later
+     '127.0.0.1:3000', // add prod domain later
   ],
 }));
 app.use(express.json());
@@ -84,30 +85,58 @@ app.get('/api/prices/accessory', async (_req, res) => {
 });
 
 // Contact Form Post command
-app.post('/api/inquiries', async (req, res) => {
+app.post("/api/inquiries", async (req, res) => {
   try {
-    const { firstname, lastname, email, message } = req.body || {};
+    const { firstname, lastname, email, message, captcha } = req.body || {};
 
-    // Basic validation
-    const str = (v) => (typeof v === 'string' ? v.trim() : '');
+    // ✅ Step 1: Verify captcha
+    if (!captcha) {
+      return res.status(400).json({ error: "Captcha required." });
+    }
+
+    const captchaRes = await fetch(
+      `https://www.google.com/recaptcha/api/siteverify`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `secret=${process.env.RECAPTCHA_SECRET}&response=${captcha}`,
+      }
+    );
+
+    const captchaData = await captchaRes.json();
+    if (!captchaData.success) {
+      return res.status(400).json({ 
+        error: "Captcha verification failed.", 
+        details: captchaData 
+      });
+}
+
+    // ✅ Step 2: Proceed with your existing logic
+    const str = (v) => (typeof v === "string" ? v.trim() : "");
     const fn = str(firstname);
     const ln = str(lastname);
     const em = str(email);
     const msg = str(message);
 
     if (!fn || !ln || !em || !msg) {
-      return res.status(400).json({ error: 'All fields are required.' });
-    }
-    // Very basic email check
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) {
-      return res.status(400).json({ error: 'Invalid email address.' });
-    }
-    // Length guards (must match your DB column sizes)
-    if (fn.length > 100 || ln.length > 100 || em.length > 200 || msg.length > 5000) {
-      return res.status(400).json({ error: 'One or more fields are too long.' });
+      return res.status(400).json({ error: "All fields are required." });
     }
 
-    // Parameterized insert (submitted_at uses DB default NOW())
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) {
+      return res.status(400).json({ error: "Invalid email address." });
+    }
+
+    if (
+      fn.length > 100 ||
+      ln.length > 100 ||
+      em.length > 200 ||
+      msg.length > 5000
+    ) {
+      return res
+        .status(400)
+        .json({ error: "One or more fields are too long." });
+    }
+
     const { rows } = await pool.query(
       `
       INSERT INTO logbooks.inquiries (firstname, lastname, email, message)
@@ -120,11 +149,11 @@ app.post('/api/inquiries', async (req, res) => {
     return res.status(201).json({
       ok: true,
       id: rows[0]?.id,
-      submitted_at: rows[0]?.submitted_at
+      submitted_at: rows[0]?.submitted_at,
     });
   } catch (e) {
-    console.error('Insert inquiry failed:', e);
-    return res.status(500).json({ error: 'Failed to submit inquiry.' });
+    console.error("Insert inquiry failed:", e);
+    return res.status(500).json({ error: "Failed to submit inquiry." });
   }
 });
 
