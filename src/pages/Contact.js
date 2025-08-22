@@ -161,8 +161,7 @@ function Contact() {
               <p>Expect a friendly reply within 1–2 business days.</p>
               <h3>Address:</h3>
               <p>46 Williamson Road</p>
-              <p>Ingleburn, 2565</p>
-              <p>Sydney, NSW</p>
+              <p>Ingleburn, NSW 2565</p>
             </div>
           </div>
         </div>

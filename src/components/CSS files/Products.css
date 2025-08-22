@@ -11,8 +11,8 @@
 
   /* full-cover background */
   background-image: url('../productsheader.jpg');
-  background-size: cover;           /* was 100% */
-  background-position: center;      /* nicer default than 80% 45% */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
   animation: productZoom 7s ease-out forwards;
@@ -56,12 +56,12 @@
 /* ===== Breadcrumb + intro ===== */
 .breadcrumb {
   max-width: clamp(640px, 86vw, 840px);
-  margin: 32px auto 8px;       /* space below hero, small gap to intro */
+  margin: 32px auto 8px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;                    /* spacing around › separators */
-  flex-wrap: wrap;             /* wrap nicely on small screens */
+  gap: 8px;               
+  flex-wrap: wrap;    
   font-size: 1.05rem;
   color: #777;
   text-align: center;
