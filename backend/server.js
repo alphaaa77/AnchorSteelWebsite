@@ -154,5 +154,82 @@ app.post("/api/inquiries", async (req, res) => {
   }
 });
 
+// Quote Form Post command
+app.post("/api/quotes", async (req, res) => {
+  try {
+    const { full_name, company, email, delivered_by, message, captcha } = req.body || {};
+
+    // 1. Require captcha
+    if (!captcha) {
+      return res.status(400).json({ error: "Captcha required." });
+    }
+
+    const captchaRes = await fetch(
+      `https://www.google.com/recaptcha/api/siteverify`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `secret=${process.env.RECAPTCHA_SECRET}&response=${captcha}`,
+      }
+    );
+
+    const captchaData = await captchaRes.json();
+    if (!captchaData.success) {
+      return res.status(400).json({
+        error: "Captcha verification failed.",
+        details: captchaData,
+      });
+    }
+
+    // 2. Sanitize inputs
+    const str = (v) => (typeof v === "string" ? v.trim() : "");
+    const fn = str(full_name);
+    const co = str(company);
+    const em = str(email);
+    const db = str(delivered_by);
+    const msg = str(message);
+
+    // 3. Validate inputs
+    if (!fn || !co || !em || !db || !msg) {
+      return res.status(400).json({ error: "All fields are required." });
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) {
+      return res.status(400).json({ error: "Invalid email address." });
+    }
+
+    if (
+      fn.length > 200 ||
+      co.length > 200 ||
+      em.length > 200 ||
+      msg.length > 5000
+    ) {
+      return res.status(400).json({ error: "One or more fields are too long." });
+    }
+
+    // 4. Insert into DB
+    const { rows } = await pool.query(
+      `
+      INSERT INTO logbooks.quotes (full_name, company, email, delivered_by, message, submitted_at)
+      VALUES ($1, $2, $3, $4, $5, NOW())
+      RETURNING id, submitted_at
+      `,
+      [fn, co, em, db, msg]
+    );
+
+    // 5. Respond success
+    return res.status(201).json({
+      ok: true,
+      id: rows[0]?.id,
+      submitted_at: rows[0]?.submitted_at,
+    });
+  } catch (e) {
+    console.error("Insert quote failed:", e);
+    return res.status(500).json({ error: "Failed to submit quote." });
+  }
+});
+
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`API running on http://localhost:${PORT}`));
