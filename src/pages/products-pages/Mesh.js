@@ -18,8 +18,8 @@ function Mesh() {
     <div className="section">
         <header className="page-header products-animated-header">
         <div className="page-header-overlay">
-            <h1>Rebar</h1>
-            <p>Deformed reinforcing bars for structural concrete</p>
+            <h1>Mesh</h1>
+            <p>Reinforcing mesh for structural concrete</p>
         </div>
         </header>
             <nav className="breadcrumb">

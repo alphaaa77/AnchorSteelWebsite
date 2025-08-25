@@ -34,8 +34,8 @@ function Main() {
 
     return (
         <div className = "section-main">
-            <header className="animated-header">
-            <div className="header-overlay">
+            <header className="page-header animated-header">
+            <div className="page-header-overlay">
                 <h1>Built For Life.</h1>
             </div>
             </header>

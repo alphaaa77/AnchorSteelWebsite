@@ -1,42 +1,18 @@
 .contact-animated-header {
-  composes: page-header;
   background-image: url('../contact.jpg');
 }
-
-
-@keyframes contactZoom {
-  0% { background-size: 100%; }
-  100% { background-size: 110%; }
+.contact-animated-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1px;
+}
+.contact-animated-header h3 {
+  font-size: 2rem;
+  margin-bottom: 9px;
+}
+.contact-animated-header p {
+  font-size: 1.5rem;
 }
 
-.contact-header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  color: white;
-  background: rgba(48, 48, 48, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 10px; /* ✅ add slight padding for safe text spacing */
-  overflow: hidden;
-  z-index: 2;
-}
-
-.contact-header-overlay h1 {
-  font-size: 4.5rem;
-  margin-bottom: 12px;
-}
-
-.contact-header-overlay p {
-  font-size: 1.7rem;
-  max-width: 600px;
-  color: aliceblue;
-}
 .contact-form-section {
   padding: 40px 20px;
   background-color: #ffffff;
@@ -135,13 +111,17 @@
     height: 150px; /* smaller header */
   }
 
-  .contact-header-overlay h1 {
-    font-size: 2rem; /* scale down title */
+  .contact-animated-header h1 {
+    font-size: 1.6rem; /* scale down title */
+    margin-bottom: 6px;
+  }
+    .contact-animated-header h3 {
+    font-size: 1rem; /* scale down title */
     margin-bottom: 6px;
   }
 
-  .contact-header-overlay p {
-    font-size: 1rem; /* smaller paragraph */
+  .contact-animated-header p {
+    font-size: 0.5rem; /* smaller paragraph */
     max-width: 90%;  /* avoid edge overflow */
   }
 }

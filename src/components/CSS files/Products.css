@@ -1,19 +1,10 @@
 /* ======= Hero/Header (full-bleed) ======= */
 .products-animated-header {
-composes: page-header;
 background-image: url('../productsheader.jpg');
 }
 
-@keyframes productZoom {
-  0% {
-    background-size: 100%;
-  }
-  100% {
-    background-size: 110%;
-  }
-}
 
-/* overlay should cover the whole header */
+/* OVERLAY */
 .products-header-overlay {
   position: absolute;
   top: 0;
