@@ -1,11 +1,5 @@
 .aboutus-animated-header {
-  composes: page-header; /* if using CSS modules */
   background-image: url('../aboutuspic.jpg');
-}
-
-@keyframes aboutZoom {
-  0% { background-size: 100%; }
-  100% { background-size: 110%; }
 }
 
 .aboutus-header-overlay {
