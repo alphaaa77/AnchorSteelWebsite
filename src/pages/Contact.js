@@ -68,8 +68,8 @@ function Contact() {
 
   return (
     <div className="section">
-      <header className="contact-animated-header">
-        <div className="contact-header-overlay">
+      <header className="page-header contact-animated-header">
+        <div className="page-header-overlay">
           <h1>Contact Us!</h1>
           <h3>Address:</h3>
           <p>46 Williamson Road, Ingleburn, 2565, Sydney, NSW</p>

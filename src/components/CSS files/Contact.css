@@ -1,20 +1,8 @@
 .contact-animated-header {
-  position: relative;
-  width: 100vw; /* full viewport width */
-  height: 200px;
-  overflow: hidden;
+  composes: page-header;
   background-image: url('../contact.jpg');
-  background-size: cover;
-  background-position: 80% 45%;
-  background-repeat: no-repeat;
-  animation: contactZoom 7s ease-out forwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* Ensure it breaks out of any container limits */
-  margin-left: calc(-50vw + 50%); /* centers and makes it span full width */
 }
+
 
 @keyframes contactZoom {
   0% { background-size: 100%; }
@@ -31,11 +19,10 @@
   background: rgba(48, 48, 48, 0.4);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
-  transform: translateX(-3%);
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0; /* remove extra padding */
+  padding: 0 10px; /* ✅ add slight padding for safe text spacing */
   overflow: hidden;
   z-index: 2;
 }
@@ -48,11 +35,11 @@
 .contact-header-overlay p {
   font-size: 1.7rem;
   max-width: 600px;
-  color:aliceblue;
+  color: aliceblue;
 }
 .contact-form-section {
   padding: 40px 20px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -72,7 +59,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: #fff;
+  background-color: #f3fcff;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -113,7 +100,7 @@
   flex: 1;
   min-width: 300px;
   max-width: 400px;
-  background-color: white;
+  background-color: #f3fcff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -141,4 +128,34 @@
 .info-content p {
   font-size: 1rem;
   color: #333;
+}
+/* ==================== MOBILE RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .contact-animated-header {
+    height: 150px; /* smaller header */
+  }
+
+  .contact-header-overlay h1 {
+    font-size: 2rem; /* scale down title */
+    margin-bottom: 6px;
+  }
+
+  .contact-header-overlay p {
+    font-size: 1rem; /* smaller paragraph */
+    max-width: 90%;  /* avoid edge overflow */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-animated-header {
+    height: 120px;
+  }
+
+  .contact-header-overlay h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-header-overlay p {
+    font-size: 0.9rem;
+  }
 }

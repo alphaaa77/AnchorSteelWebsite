@@ -51,8 +51,8 @@ const pick = (code) => {
 
   return (
     <div className="section">
-      <header className="products-animated-header">
-        <div className="products-header-overlay"><h1>Rectangular Mesh</h1></div>
+      <header className="page-header products-animated-header">
+        <div className="page-header-overlay"><h1>Rectangular Mesh</h1></div>
       </header>
 
       <nav className="breadcrumb">

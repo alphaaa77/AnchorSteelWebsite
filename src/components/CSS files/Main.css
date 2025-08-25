@@ -19,15 +19,18 @@
   opacity: 1;
   transform: translateX(0);
 }
-.main-header h1{
+
+.main-header h1 {
   margin-bottom: 20px;
 }
-.main-header p{
+
+.main-header p {
   font-size: 1.1rem;
   color: #444;
   max-width: 600px;
   margin: 0 auto 30px auto;
 }
+
 .animated-header {
   position: relative;
   width: 100%;
@@ -50,22 +53,18 @@
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: 80% 35%;
-  transform: rotate(-0.5deg); /* ✅ try 2deg or -2deg */
+  transform: rotate(-0.5deg);
   z-index: -1;
   transition: transform 0.3s ease;
 }
 
-
 @keyframes zoomInBackground {
-  0% {
-    background-size: 100%;
-  }
-  100% {
-    background-size: 110%;
-  }
+  0% { background-size: 100%; }
+  100% { background-size: 110%; }
 }
+
 .header-overlay {
-  position: absolute; /* not relative */
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -81,7 +80,7 @@
   padding: 25px;
   overflow: hidden;
   margin-top: -45px;
-  z-index: 2; /* just to be sure it's on top */
+  z-index: 2;
 }
 
 .header-overlay h1 {
@@ -93,27 +92,28 @@
 .header-overlay p {
   font-size: 1.7rem;
   max-width: 600px;
-  color:aliceblue;
+  color: aliceblue;
 }
+
 /* ============== Partnered Companies ================= */
 .logo-banner {
   overflow: hidden;
   background-color: #ffffff;
-  padding: 30px 0 20px; /* more top padding for heading */
+  padding: 30px 0 20px;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ddd;
-  text-align: center; /* centers heading */
+  text-align: center;
 }
 
 .logo-banner-heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #0d47a1; /* cleaner dark blue */
+  color: #0d47a1;
   margin-bottom: 12px;
   margin-top: -30px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #b8b8b8; /* the divider line */
-  display: inline-block; /* makes the line only as wide as the text */
+  border-bottom: 2px solid #b8b8b8;
+  display: inline-block;
 }
 
 .logo-track {
@@ -137,15 +137,11 @@
 }
 
 @keyframes scrollLogos {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
-/* ========== About ========== CSS */
+/* ========== About ========== */
 .main-about {
   background-color: #ffffff;
   padding: 60px 20px;
@@ -175,7 +171,7 @@
 }
 
 .about-text h1 {
-  color:#000E99;
+  color: #000E99;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -189,10 +185,10 @@
 .about-text p {
   font-size: 1.1rem;
   color: #444;
-  font-family:'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-/* =============================== */
-/* ========== Produces & Services ========== */
+
+/* ========== Products & Services ========== */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -234,17 +230,19 @@
 .service-card p {
   font-size: 0.95rem;
   color: #555;
-  font-family:'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 .main-prodserv {
-  background-color:#ffffff; 
+  background-color: #ffffff;
   padding-top: 5px;
   padding-bottom: 20px;
 }
-.main-prodserv h1{
-  color:#000E99;
+
+.main-prodserv h1 {
+  color: #000E99;
 }
-/* ========================================= */
+
 /* ========== Projects ========== */
 .project-gallery {
   display: flex;
@@ -253,6 +251,7 @@
   flex-wrap: wrap;
   margin-top: 30px;
 }
+
 .project-gallery img {
   width: 300px;
   height: 200px;
@@ -260,30 +259,35 @@
   border-radius: 8px;
   transition: transform 0.3s;
 }
+
 .project-gallery img:hover {
   transform: scale(1.05);
 }
+
 .main-projects {
   background-color: #ffffff;
   padding-top: 5px;
   padding-bottom: 20px;
 }
+
 .main-projects h1 {
-  color:#000E99;
+  color: #000E99;
 }
-/* ================================ */
+
 /* ========== Contact ========== */
 .main-contact {
   background-color: #ffffff;
   padding-top: 5px;
   padding-bottom: 20px;
 }
+
 .main-contact p {
-  font-family:'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 .contact-btn {
   padding: 10px 30px;
-  background-color: #3e8e9f; /* steel blue */
+  background-color: #3e8e9f;
   color: white;
   border: none;
   border-radius: 20px;
@@ -291,7 +295,101 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .contact-btn:hover {
   background-color: #2f6d7d;
 }
-/* ============================== */
+
+/* ==================== MOBILE RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  /* Header */
+  .header-overlay h1 {
+    font-size: 2rem;            /* much smaller heading */
+    margin-bottom: 5px;
+  }
+
+  .header-overlay p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .animated-header {
+    height: 150px;              /* shorter header */
+    overflow: hidden;
+  }
+    .animated-header::before {
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;     /* ✅ cover keeps it cropped, not stretched */
+    background-position: center;/* ✅ centers image instead of pushing sides */
+    transform: none;            /* remove slight rotation on mobile */
+  }
+    .header-overlay {
+    width: 100%;                /* use full width */
+    max-width: 100%;            /* no 91% cap */
+    margin-top: 0;              /* remove negative margin */
+    padding: 15px;              /* smaller padding */
+  }
+
+
+  /* About */
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .about-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+  .about-text {
+    max-width: 90%;
+    text-align: center;
+  }
+  .about-text h1 {
+    font-size: 2rem;
+  }
+  .about-text h2 {
+    font-size: 1.2rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .service-card img {
+    height: 140px;
+  }
+
+  /* Logo banner */
+  .logo-track {
+    gap: 60px;
+  }
+  .logo-track img {
+    height: 40px;
+  }
+
+  /* Projects */
+  .project-gallery img {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Contact */
+  .contact-btn {
+    width: 80%;
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-overlay h1 {
+    font-size: 1.6rem;
+  }
+  .logo-track {
+    gap: 40px;
+  }
+}

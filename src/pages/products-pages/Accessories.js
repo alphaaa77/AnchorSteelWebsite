@@ -40,8 +40,8 @@ function Accessories() {
 
   return (
     <div className="section">
-      <header className="products-animated-header">
-        <div className="products-header-overlay">
+      <header className="page-header products-animated-header">
+        <div className="page-header-overlay">
           <h1>Accessories</h1>
           <p>Tap a card to see details</p>
         </div>

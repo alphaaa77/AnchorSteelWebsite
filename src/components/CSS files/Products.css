@@ -1,24 +1,7 @@
 /* ======= Hero/Header (full-bleed) ======= */
 .products-animated-header {
-  position: relative;
-  /* break out of centered container */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  height: 200px;
-  overflow: hidden;
-
-  /* full-cover background */
-  background-image: url('../productsheader.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  animation: productZoom 7s ease-out forwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+composes: page-header;
+background-image: url('../productsheader.jpg');
 }
 
 @keyframes productZoom {

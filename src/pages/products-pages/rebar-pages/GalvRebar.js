@@ -78,8 +78,8 @@ function GalvRebar() {
 
   return (
     <div className="section">
-      <header className="products-animated-header">
-        <div className="products-header-overlay"><h1>Rounded Rebar</h1></div>
+      <header className="page-header products-animated-header">
+        <div className="page-header-overlay"><h1>Rounded Rebar</h1></div>
       </header>
 
       <nav className="breadcrumb">

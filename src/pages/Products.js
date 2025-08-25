@@ -11,8 +11,8 @@ function Products() {
 
   return (
     <div className="section">
-      <header className="products-animated-header">
-        <div className="products-header-overlay">
+      <header className="page-header products-animated-header">
+        <div className="page-header-overlay">
           <h1>Products Page</h1>
           <p>Supplying high-quality reinforcement solutions for all construction needs</p>
         </div>

@@ -17,8 +17,8 @@ function Rebar() {
 
     return (
     <div className="section">
-        <header className="products-animated-header">
-        <div className="products-header-overlay">
+        <header className="page-header products-animated-header">
+        <div className="page-header-overlay">
             <h1>Rebar</h1>
             <p>Deformed reinforcing bars for structural concrete</p>
         </div>
