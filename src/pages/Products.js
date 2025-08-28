@@ -14,7 +14,7 @@ function Products() {
       <header className="page-header products-animated-header">
         <div className="page-header-overlay">
           <h1>Products Page</h1>
-          <p>Supplying high-quality reinforcement solutions for all construction needs</p>
+          <p>Reinforcing Steel You Can Trust – Built for Life</p>
         </div>
       </header>
 
@@ -31,7 +31,7 @@ function Products() {
             {expandedIndex === 0 && (
               <>
                 <p className="card-details">
-                  Various sizes of reinforcing steel bars for concrete reinforcement
+                  High-strength steel bars available in multiple grades, cut and bent to specification.
                 </p>
                 <Link
                   to="/rebar"
@@ -57,7 +57,7 @@ function Products() {
             {expandedIndex === 1 && (
               <>
                 <p className="card-details">
-                  Pre-fabricated steel mesh sets for slab and wall reinforcement
+                  Standard and custom-engineered mesh for slabs, walls, and foundations.
                 </p>
                 <Link
                   to="/mesh"
@@ -83,7 +83,7 @@ function Products() {
             {expandedIndex === 2 && (
               <>
                 <p className="card-details">
-                  Ties, bar chairs, spacers, and other reinforcement accessories
+                  Tie wire, spacers, dowels, safety caps, void formers, and decking solutions.
                 </p>
                 <Link
                   to="/accessories"

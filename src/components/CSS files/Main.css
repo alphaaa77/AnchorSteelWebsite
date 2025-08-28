@@ -297,7 +297,7 @@
     max-width: 90%;
   }
   .animated-header {
-    height: 150px;              /* shorter header */
+    height: 140px;              /* shorter header */
     overflow: hidden;
   }
     .animated-header::before {

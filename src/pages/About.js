@@ -7,28 +7,41 @@ function About() {
             <header className="page-header aboutus-animated-header">
                 <div className="page-header-overlay">
                 <h1>About Anchor Steel</h1>
-                <p>Ipsum ut sunt in quis non aliqua proident aliqua ullamco ea.</p>
+                <p>Built for Life.</p>
                 </div>
             </header>
 
             <section className="about-overview">
                 <p>
-                    Anchor Steel Pty Ltd is a trusted supplier of reinforcing steel solutions across Australia.
-                    With decades of experience in construction and civil engineering projects, we pride ourselves on
-                    delivering high-quality products, reliable service, and strong partnerships.
+Anchor Steel P/L was founded with one mission: to support Australia’s
+construction industry with reinforcing steel that is strong, compliant, and
+reliable.
                 </p>
-                <p>Laboris reprehenderit mollit ipsum laboris ipsum laboris id. In do consectetur amet cupidatat do minim voluptate sint ipsum laboris. Qui minim eiusmod tempor sit. Cupidatat dolor ut irure in pariatur dolore reprehenderit sit commodo amet aliqua dolor consectetur.</p>
+            </section>
+
+            <section className="why-choose-us">
+                <h2>Why choose Anchor Steel?</h2>
+                <ul>
+                    <li><strong>Local expertise: </strong>Sydney-based and Australian-owned.</li>
+                    <li><strong>Certified Quality: </strong>All products ACRS certified.</li>
+                    <li><strong>Safety & Sustainability</strong>ISO-aligned systems for people and planet.</li>
+                    <li><strong>One-Stop Shop: </strong>From quote to delivery, everything handled under one roof.</li>
+                    <li><strong>Client Care: </strong>We work with you like family, not just as a supplier.</li>
+                </ul>
             </section>
 
             <section className="core-values">
-                <h2>Our Values</h2>
+                <h2>We follow principles that define how we work:</h2>
                 <ul>
-                    <li><strong>Quality First: </strong>We deliver products and workmanship that meet or exceed
-                        Australian Standards, ensuring durability and performance in every build.</li>
-                    <li><strong>Reliability: </strong>We pride ourselves on timely delivery, transparent communication,and consistent project outcomes.</li>
-                    <li><strong>Health & Safety: </strong>We prioritise the well-being of our people, clients, and the
-community, maintaining strict safety protocols across all operations.</li>
+                    <li><strong>Integrity & Relationships: </strong>Our clients and partners are part of the Anchor family. We treat every project with respect and humility.</li>
+                    <li><strong>Excellence in Quality: </strong>All products are ACRS certified and meet AS/NZS 4671 and AS/NZS 3600 standards.</li>
+                    <li><strong>Safety first: </strong>Workplaces should be safe for everyone. Our operations follow ISO 45001 principles.</li>
+                    <li><strong>Sustainable Future: </strong>We adopt environmentally responsible practices, minimising waste and reducing our carbon footprint.</li>
+                    <li><strong>Innovation & Efficiency: </strong>From BIM 3D modelling to prefabricated reinforcement, we find smarter ways to support your build.</li>
                 </ul>
+                <p>
+                    We are proud to be Sydney-based, supporting builders, engineers and developers with a one-stop shop for reinforcement needs.
+                </p>
             </section>
 
             <section className="about-placeholder">

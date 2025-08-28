@@ -128,7 +128,10 @@
 
 @media (max-width: 480px) {
   .contact-animated-header {
-    height: 120px;
+    height: 130px;
+  }
+  .contact-header-overlay {
+    background-color:#333;
   }
 
   .contact-header-overlay h1 {

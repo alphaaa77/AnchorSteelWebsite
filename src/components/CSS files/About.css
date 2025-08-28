@@ -71,6 +71,52 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Why Choose Us */
+.why-choose-us {
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #007A99;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.why-choose-us li {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.why-choose-us li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.why-choose-us li strong {
+  display: block;
+  font-size: 1.15rem;
+  color: #007A99;
+  margin-bottom: 8px;
+}
+
+
 /* Core Values List */
 .about-us .core-values ul {
   list-style: none;
@@ -136,7 +182,7 @@
 
 @media (max-width: 480px) {
   .aboutus-animated-header {
-    height: 120px;
+    height: 150px;
   }
 
   .about-us header h1 {

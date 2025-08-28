@@ -97,10 +97,27 @@ function Main() {
                         <img src={mainpic} alt="Reinforcing steel work" style={{cursor: 'default'}}/>
                     </div>
                     <div className="about-text scroll-fade-in" id="about-text">
-                        <h1>Reinforcing Strength.</h1>
+                        <h1>Anchor Steel P/L</h1>
                         <h2>Built for life.</h2>
                         <p>
-                            With decades of industry experience, Anchor Steel supplies high-quality reinforcing solutions to major projects across Australia. Our commitment to strength, reliability, and delivery excellence defines who we are.
+                            At Anchor Steel, we deliver more than just reinforcing steel — we deliver trust,
+precision, and reliability for every project across Sydney and New South
+Wales.
+                        </p>
+                        <p>
+                            Proudly Australian-owned and operated, we combine world-class processing,
+fabrication, and delivery services with a commitment to safety, sustainability,
+and customer care.
+                        </p>
+                        <h2>Our promise is simple.</h2>
+                        <p>
+                            - Certified quality that meets every Australian Standard.
+                        </p>
+                        <p>
+                            - Service that treats every client like family.
+                        </p>
+                        <p>
+                            - Innovation that saves time, reduces waste, and delivers results.
                         </p>
                     </div>
                 </div>
