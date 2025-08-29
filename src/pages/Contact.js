@@ -170,41 +170,32 @@ function Contact() {
       <div className="grid"> 
         <div className="vertical-card"> 
             <div className="card-text"> 
-                <h3>Someone</h3> 
+                <h3>JJ Zhong</h3> 
                 <h3>Email:</h3> 
-                <p>someone@anchorsteel.com.au</p> 
-                <h3>Phone:</h3> <p>+123123123</p> 
+                <p>jjz@anchorsteel.com.au</p> 
+                <h3>Phone:</h3> <p>+61 0478 868686</p> 
             </div> 
         </div> 
-            <div className="vertical-card"> 
-                <div className="card-text"> 
-                    <h3>Someone 2</h3> 
-                    <h3>Email:</h3> 
-                    <p>someone2@anchorsteel.com.au</p> 
-                    <h3>Phone:</h3> 
-                    <p>+123123123</p> 
-                </div> 
+        <div className="vertical-card"> 
+            <div className="card-text"> 
+                <h3>Rachel Hu</h3> 
+                <h3>Email:</h3> 
+                <p>rachelh@anchorsteel.com.au</p> 
+                <h3>Phone:</h3> 
+                <p>+123123123</p> 
             </div> 
+        </div> 
 
-            <div className="vertical-card"> 
-                <div className="card-text"> 
-                    <h3>Someone 3</h3> 
-                    <h3>Email:</h3> 
-                    <p>someone3@anchorsteel.com.au</p> 
-                    <h3>Phone:</h3> 
-                    <p>+123123123</p> 
-                </div>
-            </div> 
-            <div className="vertical-card"> 
-                <div className="card-text"> 
-                    <h3>Someone 4</h3> 
-                    <h3>Email:</h3> 
-                    <p>someone4@anchorsteel.com.au</p> 
-                    <h3>Phone:</h3> 
-                    <p>+123123123</p>
-                </div> 
-            </div> 
-        </div> 
+        <div className="vertical-card"> 
+            <div className="card-text"> 
+                <h3>Mario Magallanes</h3> 
+                <h3>Email:</h3> 
+                <p>mariom@anchorsteel.com.au</p> 
+                <h3>Phone:</h3> 
+                <p>+123123123</p> 
+            </div>
+        </div>
+      </div> 
     </div>
   );
 }

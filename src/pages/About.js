@@ -20,7 +20,7 @@ reliable.
             </section>
 
             <section className="why-choose-us">
-                <h2>Why choose Anchor Steel?</h2>
+                <h1>Why choose Anchor Steel?</h1>
                 <ul>
                     <li><strong>Local expertise: </strong>Sydney-based and Australian-owned.</li>
                     <li><strong>Certified Quality: </strong>All products ACRS certified.</li>
@@ -47,13 +47,11 @@ reliable.
             <section className="about-placeholder">
                 <h2>Our Team</h2>
                 <p>Our experienced team is here to ensure your project is built on a solid foundation.</p>
-                <p>Labore nisi non ipsum deserunt anim laboris sint nostrud minim ea esse reprehenderit. Voluptate adipisicing sint nulla ullamco ex ex. Proident enim in laboris sit fugiat aute deserunt quis nisi eiusmod.</p>
             </section>
 
             <section className="certifications">
                 <h2>Certifications</h2>
                 <p>Compliant with all relevant Australian building and safety standards.</p>
-                <p>Ut cupidatat deserunt aliquip non magna anim laborum esse aliquip consectetur labore nulla irure aliqua. Culpa anim aliquip amet cupidatat eu quis esse eiusmod id ex tempor in duis. Do do aliquip commodo qui occaecat. Incididunt ullamco nostrud dolore velit consectetur voluptate et.</p>
             </section>
         </div>
     );

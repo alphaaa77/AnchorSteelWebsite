@@ -22,18 +22,17 @@ function SquareMesh() {
 
   const rows = [
     { code: "L08TM3W",  diameter: "7",  area: "300", size: "6 x 0.2", kg: "41",
-      variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "Great for ties and light reinforcement." }] },
+      variants: [{ availability: "In stock", notes: "Great for ties and light reinforcement." }] },
     { code: "L11TM4W",  diameter: "8",  area: "300", size: "6 x 0.3", kg: "105",
-      variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
+      variants: [{ availability: "In stock", notes: "" }] },
     { code: "L12TM4",  diameter: "8",  area: "300", size: "6 x 2", kg: "52",
-      variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
+      variants: [{ availability: "In stock", notes: "" }] },
   ];
 
 const pick = (code) => {
   const row = dbData[code];
   if (!row) return null;
   return {
-    price: row.price,
     availability: row.availability,
     notes: row.notes
   };
@@ -112,13 +111,11 @@ const pick = (code) => {
                         <ul className="variant-list">
                           {r.variants.map((v) => {
                             const live = pick(r.code, v.length); // length is "6m" for mesh
-                            const price = live?.price ?? v.price;
                             const availability = live?.availability ?? v.availability;
                             const notes = (live?.notes ?? v.notes)?.trim();
 
                             return (
                               <li className="variant" key={v.length}>
-                                <span className="variant-item"><strong>Price:</strong> {safe(price)}</span>
                                 <span className="variant-item"><strong>Availability:</strong> {safe(availability)}</span>
                                 {safe(notes, '') && <span className="variant-item"><strong>Notes:</strong> {notes}</span>}
                               </li>

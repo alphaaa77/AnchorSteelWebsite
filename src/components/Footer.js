@@ -17,8 +17,8 @@ function Footer() {
             <h4>Anchor Steel Pty Ltd</h4>
             <p>46 Williamson Road, Ingleburn<br/>Sydney NSW 2565</p>
             <p>
-              <a href="tel:+61255550000">+61 2 9999 9999</a><br/>
-              <a href="mailto:sales@anchorsteel.com.au">sales@anchorsteel.com.au</a>
+              <a href="tel:+610478868686">0478 868686</a><br/>
+              <a href="mailto:jjz@anchorsteel.com.au">jjz@anchorsteel.com.au</a>
             </p>
           </div>
 

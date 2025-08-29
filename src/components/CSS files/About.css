@@ -79,6 +79,13 @@
   text-align: center;
 }
 
+.why-choose-us h1 {
+  font-size: 2.6rem;
+  border-left: 5px solid #C8DEB1;
+  margin-bottom: 25px;
+  color: #007A99;
+}
+
 .why-choose-us h2 {
   font-size: 2rem;
   margin-bottom: 25px;
@@ -98,6 +105,7 @@
 .why-choose-us li {
   background: #fff;
   border-radius: 10px;
+  border-left: 5px solid #A2DCE5;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;

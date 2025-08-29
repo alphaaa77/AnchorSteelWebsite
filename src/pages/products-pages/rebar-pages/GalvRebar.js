@@ -31,24 +31,24 @@ function GalvRebar() {
   // Change or add values here as needed, these are the hard-coded values
   const rows = [
     { code: "N12G", diameter: "6.5", area: "33", variants: [
-      { length: "6m",  price: "$2.10 / m", availability: "In stock"},
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
-      { length: "12m", price: "$4.20 / m", availability: "In stock"}
+      { length: "6m",  availability: "In stock"},
+      { length: "9m",  availability: "Preorder 3–5 days"},
+      { length: "12m", availability: "In stock"}
     ]},
     { code: "N16G", diameter: "10", area: "79", variants: [
-      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d"},
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
-      { length: "12m", price: "$4.20 / m", availability: "In stock"},
+      { length: "6m",  availability: "Low stock, preorder 3–5d"},
+      { length: "9m",  availability: "Preorder 3–5 days"},
+      { length: "12m", availability: "In stock"},
     ]},
     { code: "N20G", diameter: "12", area: "113", variants: [
-      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d"},
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
-      { length: "12m", price: "$4.20 / m", availability: "In stock"},
+      { length: "6m",  availability: "Low stock, preorder 3–5d"},
+      { length: "9m",  availability: "Preorder 3–5 days"},
+      { length: "12m", availability: "In stock"},
     ]},
     { code: "N24G", diameter: "16", area: "201", variants: [
-      { length: "6m",  price: "$3.80 / m", availability: "Low stock, preorder 3–5d"},
-      { length: "9m",  price: "$3.15 / m", availability: "Preorder 3–5 days"},
-      { length: "12m", price: "$4.20 / m", availability: "In stock"},
+      { length: "6m",  availability: "Low stock, preorder 3–5d"},
+      { length: "9m",  availability: "Preorder 3–5 days"},
+      { length: "12m", availability: "In stock"},
     ]},
   ];
 
@@ -58,15 +58,14 @@ function GalvRebar() {
     if (!row) return null;
 
     const map = {
-      '6m':  { price: 'sixm_price',   avail: 'sixm_avail'   },
-      '9m':  { price: 'ninem_price',  avail: 'ninem_avail'  },
-      '12m': { price: 'twelvem_price',avail: 'twelvem_avail'},
+      '6m':  { avail: 'sixm_avail'   },
+      '9m':  { avail: 'ninem_avail'  },
+      '12m': { avail: 'twelvem_avail'},
     };
     const cols = map[length];
     if (!cols) return null;
 
     return {
-      price: row[cols.price],
       availability: row[cols.avail],
       notes: row.notes, // shared notes column in your table
     };
@@ -139,18 +138,16 @@ function GalvRebar() {
                   <tr id={`details-${i}`} className={`details-row ${isOpen ? "show" : ""}`}>
                     <td colSpan={4}>
                       {loading ? (
-                        <div className="variant-loading">Loading live prices…</div>
+                        <div className="variant-loading">Loading availability...</div>
                       ) : (
                         <ul className="variant-list">
                           {r.variants.map((v) => {
                             const live = pick(r.code, v.length);
-                            const price = live?.price ?? v.price;
                             const availability = live?.availability ?? v.availability;
 
                             return (
                               <li className="variant" key={v.length}>
                                 <span className="variant-length">{v.length}</span>
-                                <span className="variant-item"><strong>Price:</strong> {safe(price)}</span>
                                 <span className="variant-item"><strong>Availability:</strong> {safe(availability)}</span>
                               </li>
                             );

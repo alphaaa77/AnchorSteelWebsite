@@ -12,6 +12,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000', // React dev
+    'http://192.168.100.183:3000',
      '127.0.0.1:3000', // add prod domain later
   ],
 }));

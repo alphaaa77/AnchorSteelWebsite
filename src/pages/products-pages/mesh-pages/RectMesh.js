@@ -22,24 +22,23 @@ function SquareMesh() {
 
   const rows = [
     { code: "RL718",  diameter: "7 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "68",
-      variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "Great for ties and light reinforcement." }] },
+      variants: [{ availability: "In stock", notes: "Great for ties and light reinforcement." }] },
     { code: "RL818",  diameter: "8 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "79",
-      variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
+      variants: [{ availability: "In stock", notes: "" }] },
     { code: "RL918",  diameter: "9 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "93",
-      variants: [{ price: "$2.10 / sheet", availability: "In stock", notes: "" }] },
+      variants: [{ availability: "In stock", notes: "" }] },
     { code: "RL1018",  diameter: "10 x 7",  area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "109",
-      variants: [{ price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." }] },
+      variants: [{ availability: "Low stock, preorder 3–5d", notes: "Common starter size for slabs." }] },
     { code: "RL1118", diameter: "11 x 7", area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "131",
-      variants: [{ price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "" }] },
+      variants: [{ availability: "Low stock, preorder 3–5d", notes: "" }] },
     { code: "RL1218", diameter: "12 x 7", area: "100x300", size: "6 x 2.4", cover: "10.82", kg: "157",
-      variants: [{ price: "$3.80 / sheet", availability: "Low stock, preorder 3–5d", notes: "" }] },
+      variants: [{ availability: "Low stock, preorder 3–5d", notes: "" }] },
   ];
 
 const pick = (code) => {
   const row = dbData[code];
   if (!row) return null;
   return {
-    price: row.price,
     availability: row.availability,
     notes: row.notes
   };
@@ -115,18 +114,16 @@ const pick = (code) => {
                     {/* colspan must match number of <th> (7 including chevron) */}
                     <td colSpan={7}>
                       {loading ? (
-                        <div className="variant-loading">Loading live prices…</div>
+                        <div className="variant-loading">Loading availability…</div>
                       ) : (
                         <ul className="variant-list">
                           {r.variants.map((v) => {
                             const live = pick(r.code, v.length); // length is "6m" for mesh
-                            const price = live?.price ?? v.price;
                             const availability = live?.availability ?? v.availability;
                             const notes = (live?.notes ?? v.notes)?.trim();
 
                             return (
                               <li className="variant" key={v.length}>
-                                <span className="variant-item"><strong>Price:</strong> {safe(price)}</span>
                                 <span className="variant-item"><strong>Availability:</strong> {safe(availability)}</span>
                                 {safe(notes, '') && <span className="variant-item"><strong>Notes:</strong> {notes}</span>}
                               </li>
