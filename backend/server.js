@@ -5,6 +5,25 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import pkg from 'pg';
+import rateLimit from 'express-rate-limit'
+
+// Limit for general inquiries
+const inquiriesLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10,                  // limit each IP to 10 requests per 15 min
+  message: {
+    error: 'Too many inquiries from this IP, please try again later.'
+  }
+});
+
+// Limit for quote requests (stricter since it’s more sensitive)
+const quotesLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 5,                   // only 5 per hour per IP
+  message: {
+    error: 'Too many quote requests, please try again later.'
+  }
+});
 
 const { Pool } = pkg;
 const app = express();
@@ -90,7 +109,7 @@ app.get('/api/prices/accessory', async (_req, res) => {
 });
 
 // Contact Form Post command
-app.post("/api/inquiries", async (req, res) => {
+app.post("/api/inquiries", inquiriesLimiter, async (req, res) => {
   try {
     const { firstname, lastname, email, message, captcha } = req.body || {};
 
@@ -161,7 +180,7 @@ app.post("/api/inquiries", async (req, res) => {
 });
 
 // Quote Form Post command
-app.post("/api/quotes", async (req, res) => {
+app.post("/api/quotes", quotesLimiter, async (req, res) => {
   try {
     const { full_name, company, email, delivered_by, message, captcha } = req.body || {};
 
