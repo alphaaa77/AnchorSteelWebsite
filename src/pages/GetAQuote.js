@@ -10,6 +10,7 @@ function GetAQuote() {
     delivered_by: '',
     message: '',
   });
+  const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
   const [status, setStatus] = useState({ state: 'idle', msg: '' });
   const [captchaToken, setCaptchaToken] = useState(null);
 
@@ -23,7 +24,7 @@ function GetAQuote() {
     setStatus({ state: 'loading', msg: 'Submitting…' });
 
     try {
-      const res = await fetch('http://localhost:5000/api/quotes', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/quotes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -89,7 +90,7 @@ function GetAQuote() {
           {status.state === 'error' && <p style={{ color: 'crimson' }}>{status.msg}</p>}
           {status.state === 'success' && <p style={{ color: 'seagreen' }}>{status.msg}</p>}
                   <ReCAPTCHA
-              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              sitekey={siteKey}
               onChange={(token) => setCaptchaToken(token)}
             />
 

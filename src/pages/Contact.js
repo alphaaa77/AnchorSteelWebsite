@@ -13,6 +13,7 @@ function Contact() {
     message: '',
     company: ''
   });
+  const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
   const [status, setStatus] = useState({ state: 'idle', msg: '' });
   const [captchaToken, setCaptchaToken] = useState(null);
 
@@ -38,7 +39,7 @@ function Contact() {
     setStatus({ state: 'loading', msg: 'Submitting…' });
 
     try {
-      const res = await fetch('http://localhost:5000/api/inquiries', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/inquiries`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -144,7 +145,7 @@ function Contact() {
               <p style={{ marginTop: 8, color: 'seagreen' }}>{status.msg}</p>
             )}
                   <ReCAPTCHA
-              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              sitekey={siteKey}
               onChange={(token) => setCaptchaToken(token)}
             />
 
