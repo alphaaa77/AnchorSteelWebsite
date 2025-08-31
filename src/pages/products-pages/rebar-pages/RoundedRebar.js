@@ -109,8 +109,7 @@ function RoundedRebar() {
       </nav>
 
       <h3 className="product-intro">
-        Ipsum consectetur nostrud nostrud laboris minim mollit commodo tempor in. 
-        Commodo anim incididunt consectetur eu Lorem dolor in deserunt. 
+        Note: Information may be subject to change.
         </h3>
 
       {!!loadError && <div className="error-banner">Failed to load live data: {loadError}</div>}

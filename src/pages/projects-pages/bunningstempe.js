@@ -46,22 +46,22 @@ function BunningsTempe() {
                         </div>
                         <div className="meta">
                             <span className="label">Client Name</span>
-                            <span className="value">Test Client</span>
+                            <span className="value">MONDAA</span>
                         </div>
                         <div className="meta">
                             <span className="label">Tonnage</span>
-                            <span className="value">999,999</span>
+                            <span className="value">...</span>
                         </div>
                         <div className="meta">
                             <span className="label">Status</span>
-                            <span className="value">Completed</span>
+                            <span className="value">...</span>
                         </div>
                     </div>
 
                 <div className="hr"></div>
 
                 <p className="description">
-                    Sunt at non et pariatur eu deserunt sint ex voluptate laborum culpa do irure…
+                    More info coming soon!
                 </p>
             </div>
 

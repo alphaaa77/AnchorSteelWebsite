@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import '../../components/CSS files/Products.css';
 import '../../App.css';
-import placeholder from '../../assets/placeholder.png';
 import mesh from '../../assets/mesh.jpg';
 
 function Mesh() {

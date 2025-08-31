@@ -21,14 +21,14 @@ function Projects() {
       title: '7 Rodborough Road, Frenchs Forests',
       desc: 'Warehouse, Factory & Industrial Buildings',
       img: frenchforest,
-      details: 'Placeholder text.',
+      details: 'More info coming soon...',
       link: '/projects/frenchforest',
     },
     {
       title: 'Bunnings Tempe',
-      desc: 'More info coming soon!!!!',
+      desc: 'More info coming soon!',
       img: bunningstempe,
-      details: 'Placeholder text.',
+      details: 'More info coming soon...',
       link: '/projects/bunningstempe',
     }
   ];

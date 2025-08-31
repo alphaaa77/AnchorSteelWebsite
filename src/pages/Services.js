@@ -20,37 +20,37 @@ function Services() {
       title: 'Bar Processing',
       desc: 'Precision cutting, bending, bundling, and tagging.',
       img: placeholder,
-      details: 'Irure dolor aliquip voluptate ullamco adipisicing occaecat minim occaecat culpa laboris aliqua dolore velit id. Reprehenderit laboris quis anim exercitation culpa pariatur ea. Aliqua est ex quis ad.',
+      details: 'More info coming soon...',
     },
     {
       title: 'Mesh Processing',
       desc: 'Custom shapes and sizes to meet complex project requirements.',
       img: placeholder,
-      details: 'Placeholder text.',
+      details: 'More info coming soon...',
     },
     {
       title: 'Prefabrication',
       desc: 'Columns, footings, piers, and cages, factory-assembled for easy installation.',
       img: placeholder,
-      details: 'Placeholdertext',
+      details: 'More info coming soon...',
     },
     {
       title: '3D BIM Modelling',
       desc: 'Visualise reinforcement before construction begins.',
       img: placeholder,
-      details: 'Placeholder text',
+      details: 'More info coming soon...',
     },
     {
       title: 'Estimating & Scheduling',
       desc: 'Accurate quotes and planning support.',
       img: placeholder,
-      details: 'Placeholder text',
+      details: 'More info coming soon...',
     },
     {
       title: 'Delivery & Logistics',
       desc: 'A modern fleet with Hiab trucks, computer tracking, and fall-safe unloading for on-time and safe site supply.',
       img: placeholder,
-      details: 'Placeholder text',
+      details: 'More info coming soon...',
     }
   ];
 
