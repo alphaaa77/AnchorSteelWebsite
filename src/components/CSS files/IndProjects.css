@@ -1,0 +1,148 @@
+:root{
+  --brand: #0e6bff;        /* tweak to your blue */
+  --ink: #0c1222;
+  --muted: #6b7280;
+  --border: #e8ecf3;
+  --ring: 0 8px 24px rgba(15, 23, 42, .08);
+}
+
+/* Page rhythm */
+.section{
+  padding: clamp(24px, 3vw, 48px) 16px;
+  padding-top:0px;
+  background:#fff;
+}
+
+/* Constrain page content */
+.page-container{
+  max-width: 2300px;
+  margin: 0 auto;
+}
+
+/* Carousel wrapper: only for positioning the arrows */
+.carousel {
+  position: relative;
+  margin: 12px auto 28px;
+  max-width: 2300px;
+  display: flex;
+  justify-content: center; /* keeps image centered inside */
+}
+
+/* Image is the “container” now */
+.carousel-img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 45vw, 520px);
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  box-shadow: var(--ring);
+  border: 1px solid var(--border);
+}
+
+/* Arrows stay fixed over the image */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 1.6rem;
+  background: rgba(255,255,255,.9);
+  border: 1px solid var(--border);
+  padding: .45rem .8rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.07);
+  cursor: pointer;
+}
+.carousel-btn img {
+    width: 35px;
+    height: auto;
+}
+
+.carousel-btn.left  { left: 12px; }
+.carousel-btn.right { right: 12px; }
+.carousel:hover .carousel-btn { opacity: 1; }
+.carousel-btn:hover { transform: translateY(-50%) scale(1.06); }
+
+/* Project details card */
+.project-card {
+  max-width: 980px;
+  margin: 24px auto 0; /* top margin, auto left/right centering */
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--ring);
+  background: #fff;
+  padding: clamp(18px, 3.2vw, 28px);
+}
+
+/* Title */
+.project-title{
+  text-align:center;
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #000E99;
+  margin: 0 0 14px;
+}
+
+/* Meta grid */
+.meta-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 12px 0 8px;
+}
+@media (min-width: 640px){
+  .meta-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px){
+  .meta-grid{ grid-template-columns: repeat(4, 1fr); } /*Change value as needed*/
+}
+.meta{
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fafcff;
+}
+.meta .label{
+  display:block; font-size: 12px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--muted); margin-bottom: 6px;
+  color:#000E99;
+}
+.meta .value{
+  font-weight: 700; color: var(--ink);
+}
+
+/* Divider */
+.hr{
+  height:1px; background: var(--border);
+  margin: 18px 0;
+  border-radius: 999px;
+}
+
+/* Description */
+.project-lead {
+  text-align: center;
+  color: var(--muted);
+  margin: 4px auto 24px; /* increased bottom margin to push it from the meta grid */
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.description{
+  max-width: 72ch;
+  margin: 0 auto;
+  color: #1f2937;
+  line-height: 1.75;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Small flourish under the card */
+.project-card::after{
+  content:""; display:block; height: 12px; border-radius: 0 0 16px 16px;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,.03));
+}
+
+/* Spacing to footer/next sections */
+.section + .section{ padding-top: 12px; }

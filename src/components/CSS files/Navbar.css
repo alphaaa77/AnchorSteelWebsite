@@ -1,0 +1,179 @@
+/* ========== Base Navbar ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Desktop navbar menu */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* push links to the right */
+  flex: 1;                    /* take up remaining space */
+  gap: 70px;
+}
+
+/* Logo */
+.navbar-logo{
+  height: 60px;
+  object-fit: contain;
+}
+
+
+/* Links */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  color: #000E99;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.nav-button:hover {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+/* Social icons */
+.navbar-social {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Quote button */
+.quote-button {
+  background-color: #000E99;
+  color: white;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.3s ease;
+
+  /* Pulse animation */
+  animation: pulse 2.4s infinite;
+}
+
+/* Define pulse keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 14, 153, 0.7);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px 5px rgba(0, 14, 153, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 14, 153, 0);
+  }
+}
+
+
+.quote-button:hover {
+  background-color: #0055cc;
+  transform: scale(1.05);
+}
+
+/* ========== Hamburger ========== */
+.hamburger {
+  display: none; /* hidden on desktop */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000E99;
+}
+
+/* ========== Mobile Menu ========== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+
+  .navbar {
+    flex-direction: row;   /* keep logo + hamburger side by side */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* hide menu by default */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  /* show menu when open */
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
+  .navbar-social {
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .social-icon {
+    height: 36px;
+    width: 36px;
+  }
+
+  .quote-button {
+    margin-top: 12px;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-button {
+    font-size: 16px;
+  }
+  .quote-button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

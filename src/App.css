@@ -1,28 +1,91 @@
-header {
-  padding: 50px;
+html, body {
+  overflow-x: hidden;
+}
+/* Universal Header */
+.page-header {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 280px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(48, 48, 48, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background-color: #AAF0E9;
-  border-radius: 12px;
+  color: white;
+  padding: 0 10px;
+  z-index: 2;
+}
+.page-header-overlay h1 {
+  font-size: 3rem;   /* big heading */
+  font-weight: 700;
+}
+
+.page-header-overlay p {
+  font-size: 1.2rem; /* subtext */
+  color: white;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header { height: 180px; }
+  .page-header-overlay h1 { font-size: 2rem; }
+  .page-header-overlay p { font-size: 1rem; max-width: 90%; }
+}
+@media (max-width: 480px) {
+  .page-header { height: 150px; }
+  .page-header-overlay h1 { font-size: 1.6rem; }
+  .page-header-overlay p { font-size: 0.9rem; }
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Oswald", sans-serif;
 }
 footer {
   text-align: center;
   background-color: #AAF0E9;
 }
 .section {
-  padding: 40px 20px;
+  padding: 10px 0.1px;
   text-align: center;
 }
-.main-header h1{
-  margin-bottom: 10px;
+.section-projects{
+  padding: 10px 0.1px;
+  text-align: center;
 }
-.main-header p{
+.section-main{
+  padding: 10px 0.1px;
+  text-align: center;  
+}
+h1{
+  margin-bottom: 20px;
+}
+p{
   font-size: 1.1rem;
   color: #444;
   max-width: 600px;
   margin: 0 auto 30px auto;
 }
 .grid {
-  margin-top: 10px; /* 👈 adjust this value as needed */
+  margin-top: 10px; /* adjust this value as needed */
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -66,6 +129,7 @@ footer {
   background-color: #eef6ff;
   transition: all 0.3s ease;
 }
+
 @keyframes fadeIn {
   from {opacity: 0; transform: translateY(-5px); }
   to {opacity: 1; transform: translateY(0);}
@@ -96,18 +160,11 @@ footer {
 .carousel-btn:hover{
   transform: scale(1.2);
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@keyframes zoomInBackground {
+  0% {
+    background-size: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-size: 110%;
   }
-}
-.rotating-logo {
-  height: 150px;
-  width: 150px;
-  animation: spin 3.5s linear infinite;
-  display: block;
-  margin: 2rem auto;
 }
