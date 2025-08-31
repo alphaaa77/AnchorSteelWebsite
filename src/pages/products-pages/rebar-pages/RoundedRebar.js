@@ -14,7 +14,7 @@ function RoundedRebar() {
   useEffect(() => {
     // If you add "proxy": "http://localhost:5000" to your frontend package.json,
     // you can just fetch('/api/prices') here. Otherwise use full URL:
-    fetch('http://localhost:5000/api/prices/rebar')
+    fetch(`${process.env.REACT_APP_API_URL}/api/prices/rebar`)
       .then(res => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

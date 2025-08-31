@@ -9,7 +9,7 @@ function SquareMesh() {
   const [loadError, setLoadError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/prices/mesh') // or just '/api/prices/mesh' if using proxy
+    fetch(`${process.env.REACT_APP_API_URL}/api/prices/mesh`) // or just '/api/prices/mesh' if using proxy
       .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
       .then(rows => {
         const map = {};

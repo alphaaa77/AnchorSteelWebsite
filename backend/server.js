@@ -9,15 +9,19 @@ import pkg from 'pg';
 const { Pool } = pkg;
 const app = express();
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [];
+
 app.use(cors({
-  origin: [
-    'http://localhost:3000', // React dev
-    'http://192.168.100.183:3000',
-    'http://anchorsteel.com.au',
-    'http://127.0.0.1:3000', // add prod domain later
-  ],
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
 }));
-app.use(express.json());
 
 const pool = new Pool(
   process.env.DATABASE_URL
