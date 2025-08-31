@@ -144,7 +144,7 @@ function Contact() {
               <p style={{ marginTop: 8, color: 'seagreen' }}>{status.msg}</p>
             )}
                   <ReCAPTCHA
-              sitekey="6Lc0ZqkrAAAAALrQlbXyw7Qd5rmAov7QRyf2CgD-"
+              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
               onChange={(token) => setCaptchaToken(token)}
             />
 
