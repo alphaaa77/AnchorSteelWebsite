@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../components/CSS files/Services.css';
 import '../App.css';
-import placeholder from '../assets/placeholder.jpg';
+import placeholder from '../assets/placeholder.png';
 import arrowback from '../assets/arrow-back.png';
 import arrownext from '../assets/arrow-next.png';
 

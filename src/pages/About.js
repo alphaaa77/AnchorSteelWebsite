@@ -46,13 +46,13 @@ reliable.
 
             <section className="about-placeholder">
                 <h2>Our Team</h2>
-                <p>Our experienced team is here to ensure your project is built on a solid foundation.</p>
+                <p>Our dedicated team works with you every step of the way, delivering reinforcing steel solutions that keep your project strong and on schedule.</p>
             </section>
 
-            <section className="certifications">
+            {/* <section className="certifications">
                 <h2>Certifications</h2>
                 <p>Compliant with all relevant Australian building and safety standards.</p>
-            </section>
+            </section> */}
         </div>
     );
 }

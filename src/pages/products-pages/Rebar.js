@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import '../../components/CSS files/Products.css';
 import '../../App.css';
-import placeholder from '../../assets/placeholder.jpg';
+import placeholder from '../../assets/placeholder.png';
 
 function Rebar() {
   const [expandedIndex, setExpandedIndex] = useState(null);

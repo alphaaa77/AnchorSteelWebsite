@@ -30,47 +30,47 @@ function DeformedRebar() {
 
   // Change or add values here as needed, these are the hard-coded values
   const rows = [
-    { code: "N10", diameter: "6.5", area: "33", variants: [
+    { code: "N10", diameter: "10", area: "79", variants: [
       { length: "6m",  availability: "In stock"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"}
     ]},
-    { code: "N12", diameter: "10", area: "79", variants: [
+    { code: "N12", diameter: "12", area: "113", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},
     ]},
-    { code: "N16", diameter: "12", area: "113", variants: [
+    { code: "N16", diameter: "16", area: "201", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},
     ]},
-    { code: "N20", diameter: "16", area: "201", variants: [
+    { code: "N20", diameter: "20", area: "314", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},
     ]},
-    { code: "N24", diameter: "20", area: "314", variants: [
+    { code: "N24", diameter: "24", area: "452", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},
     ]},
-    { code: "N28", diameter: "24", area: "452", variants: [
+    { code: "N28", diameter: "28", area: "616", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},
     ]},
-    { code: "N32", diameter: "28", area: "573", variants: [
+    { code: "N32", diameter: "32", area: "804", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},
     ]},
-    { code: "N36", diameter: "33", area: "855", variants: [
+    { code: "N36", diameter: "36", area: "1018", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},
     ]},
-    { code: "N40", diameter: "33", area: "855", variants: [
+    { code: "N40", diameter: "40", area: "1257", variants: [
       { length: "6m",  availability: "Low stock, preorder 3–5d"},
       { length: "9m",  availability: "Preorder 3–5 days"},
       { length: "12m", availability: "In stock"},

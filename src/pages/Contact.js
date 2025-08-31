@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import '../App.css';
 import '../components/CSS files/Contact.css';
-import placeholder from '../assets/placeholder.jpg';
+import placeholder from '../assets/placeholder.png';
 
 function Contact() {
   const [form, setForm] = useState({
@@ -182,7 +182,7 @@ function Contact() {
                 <h3>Email:</h3> 
                 <p>rachelh@anchorsteel.com.au</p> 
                 <h3>Phone:</h3> 
-                <p>+123123123</p> 
+                <p>+61 411840777</p> 
             </div> 
         </div> 
 
@@ -192,7 +192,7 @@ function Contact() {
                 <h3>Email:</h3> 
                 <p>mariom@anchorsteel.com.au</p> 
                 <h3>Phone:</h3> 
-                <p>+123123123</p> 
+                <p>+61 421451697</p> 
             </div>
         </div>
       </div> 

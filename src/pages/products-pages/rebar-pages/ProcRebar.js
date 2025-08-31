@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import '../../../components/CSS files/Products.css';
 import '../../../App.css';
-import placeholder from '../../../assets/placeholder.jpg';
+import placeholder from '../../../assets/placeholder.png';
 
 function ProcRebar() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -10,31 +10,17 @@ function ProcRebar() {
   const items = [
     {
       title: 'L Bars',
-      sub: 'Plastic & Concrete',
-      price: '$XX per pack',
-      quantity: '200 pcs / pack',
-      desc: 'Maintain cover and position for bars and mesh.'
-    },
-    {
-      title: 'Another type of bar',
-      sub: 'Galvanised / Black',
-      price: '$XX per roll',
-      quantity: '1.57mm • 1.25mm',
-      desc: 'Secure bars and mesh intersections quickly and reliably.'
+      sub: 'Varied sizes',
+      price: '$XX per tonne / $XX per piece',
+      quantity: 'Custom lengths, cut & bent to spec',
+      desc: '90° bent bars, commonly used for footings, wall junctions and starter bars.'
     },
     {
       title: 'U Bars',
       sub: 'Varied sizes',
-      price: 'From $X each',
-      quantity: '20–75mm cover',
-      desc: 'Ensure correct spacing from formwork and surfaces.'
-    },
-    {
-      title: 'Caps & Safety',
-      sub: 'Mushroom caps',
-      price: '$XX per bag',
-      quantity: '100 pcs / bag',
-      desc: 'Safety caps for exposed bar ends on site.'
+      price: '$XX per tonne / $XX per piece',
+      quantity: 'Custom lengths, cut & bent to spec',
+      desc: 'U-shaped bent bars, typically used for edge reinforcement, beams and cages.'
     },
   ];
 

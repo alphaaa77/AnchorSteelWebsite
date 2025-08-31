@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../components/CSS files/Products.css';
 import '../App.css';
-import placeholder from '../assets/placeholder.jpg';
+import placeholder from '../assets/placeholder.png';
+import rebar from '../components/productsheader.jpg';
+import mesh from '../assets/mesh.jpg';
 
 function Products() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -24,7 +26,7 @@ function Products() {
           className={`vertical-card ${expandedIndex === 0 ? 'expanded' : ''}`}
           onClick={() => toggle(0)}
         >
-          <img src={placeholder} alt="Rebar" />
+          <img src={rebar} alt="Rebar" />
           <div className="card-text">
             <h2>Rebar</h2>
             <p>(Round, Deformed, Galvanized, Processed.)</p>
@@ -50,7 +52,7 @@ function Products() {
           className={`vertical-card ${expandedIndex === 1 ? 'expanded' : ''}`}
           onClick={() => toggle(1)}
         >
-          <img src={placeholder} alt="Mesh" />
+          <img src={mesh} alt="Mesh" />
           <div className="card-text">
             <h2>Mesh</h2>
             <p>(Square Mesh, Rectangular Mesh, Trench Mesh)</p>

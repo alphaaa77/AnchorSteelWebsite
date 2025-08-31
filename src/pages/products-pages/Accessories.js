@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../components/CSS files/Products.css';
 import '../../App.css';
-import placeholder from '../../assets/placeholder.jpg';
+import placeholder from '../../assets/placeholder.png';
 
 function Accessories() {
   const [expandedIndex, setExpandedIndex] = useState(null);
