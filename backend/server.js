@@ -30,6 +30,7 @@ const quotesLimiter = rateLimit({
 const { Pool } = pkg;
 const app = express();
 app.use(helmet());
+app.use(express.json());
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [];
 
 app.use(cors({
