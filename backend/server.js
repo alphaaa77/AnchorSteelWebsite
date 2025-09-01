@@ -6,6 +6,8 @@ import express from 'express';
 import cors from 'cors';
 import pkg from 'pg';
 import rateLimit from 'express-rate-limit'
+import helmet from 'helmet';
+
 
 // Limit for general inquiries
 const inquiriesLimiter = rateLimit({
@@ -27,7 +29,7 @@ const quotesLimiter = rateLimit({
 
 const { Pool } = pkg;
 const app = express();
-
+app.use(helmet());
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [];
 
 app.use(cors({
