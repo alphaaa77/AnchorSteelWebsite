@@ -22,7 +22,10 @@ function GetAQuote() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ state: 'loading', msg: 'Submitting…' });
-
+      if (!captchaToken) {
+      setStatus({ state: 'error', msg: 'Please complete the CAPTCHA.' });
+      return;
+      }
     try {
       const res = await fetch(`${process.env.REACT_APP_API_URL}/api/quotes`, {
         method: 'POST',

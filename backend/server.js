@@ -67,7 +67,6 @@ app.get('/api/prices/rebar', async (_req, res) => {
     const { rows } = await pool.query(`
       SELECT
         product_code,
-        sixm_price,  ninem_price,  twelvem_price,
         sixm_avail,  ninem_avail,  twelvem_avail
       FROM logbooks.rebar_details
       ORDER BY product_code
@@ -84,7 +83,7 @@ app.get('/api/prices/mesh', async (_req, res) => {
   try {
     const { rows } = await pool.query(`
       SELECT
-        product_code, price, available, notes
+        product_code, available, notes
       FROM logbooks.mesh_details
       ORDER BY product_code
     `);
@@ -100,7 +99,7 @@ app.get('/api/prices/accessory', async (_req, res) => {
   try {
     const { rows } = await pool.query(`
       SELECT
-        product_code, price, quantity, description
+        product_code, quantity, description
       FROM logbooks.accessory_details
       ORDER BY product_code
     `);
