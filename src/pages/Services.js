@@ -4,6 +4,8 @@ import '../App.css';
 import placeholder from '../assets/placeholder.png';
 import arrowback from '../assets/arrow-back.png';
 import arrownext from '../assets/arrow-next.png';
+import deliverypic from '../assets/Delivery.jpg';
+import estimatingpic from '../assets/Estimating.jpg';
 
 function Services() {
   const [activeCard, setActiveCard] = useState(null);
@@ -43,13 +45,13 @@ function Services() {
     {
       title: 'Estimating & Scheduling',
       desc: 'Accurate quotes and planning support.',
-      img: placeholder,
+      img: estimatingpic,
       details: 'More info coming soon...',
     },
     {
       title: 'Delivery & Logistics',
       desc: 'A modern fleet with Hiab trucks, computer tracking, and fall-safe unloading for on-time and safe site supply.',
-      img: placeholder,
+      img: deliverypic,
       details: 'More info coming soon...',
     }
   ];

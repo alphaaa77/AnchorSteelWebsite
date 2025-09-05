@@ -3,7 +3,7 @@ import '../App.css';
 import '../components/CSS files/Projects.css';
 import { Link } from 'react-router-dom';
 import frenchforest from '../assets/frenchforest/image01.jpg';
-import bunningstempe from '../assets/bunningstempe/image01.jpg';
+/*import bunningstempe from '../assets/bunningstempe/image01.jpg';*/
 import arrowback from '../assets/arrow-back.png';
 import arrownext from '../assets/arrow-next.png';
 function Projects() {
@@ -24,13 +24,6 @@ function Projects() {
       details: 'More info coming soon...',
       link: '/projects/frenchforest',
     },
-    {
-      title: 'Bunnings Tempe',
-      desc: 'More info coming soon!',
-      img: bunningstempe,
-      details: 'More info coming soon...',
-      link: '/projects/bunningstempe',
-    }
   ];
 
   // Auto-advance slideshow

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import '../App.css';
 import '../components/CSS files/Contact.css';
-import placeholder from '../assets/placeholder.png';
+import contactus from '../assets/ContactUs.jpg';
 
 function Contact() {
   const [form, setForm] = useState({
@@ -155,7 +155,7 @@ function Contact() {
           </form>
 
           <div className="contact-info-card">
-            <img src={placeholder} alt="Get in Touch" />
+            <img src={contactus} alt="Get in Touch" />
             <div className="info-content">
               <h3>Get in Touch With Us</h3>
               <p>We’ll be happy to help with any inquiries, quotes, or general information.</p>

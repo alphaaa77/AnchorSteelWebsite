@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/SS Logo.png';
 import './CSS files/Navbar.css';
-import facebook from '../assets/facebook.png';
+/*import facebook from '../assets/facebook.png';
 import linkedin from '../assets/linkedin.png';
-import instagram from '../assets/instagram.png';
+import instagram from '../assets/instagram.png';*/
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ function Navbar() {
                 <div className="navbar-links">
                     <Link to="/about" className="nav-button">About Us</Link>
                     <Link to="/contact" className="nav-button">Contact</Link>
-                    <Link to="/projects" className="nav-button">Projects</Link>
+                    {<Link to="/projects" className="nav-button">Projects</Link>}
                     <Link to="/products" className="nav-button">Products</Link>
                     <Link to="/services" className="nav-button">Services</Link>
                 </div>
@@ -35,7 +35,7 @@ function Navbar() {
                     <button className="quote-button">Get A Quote</button>
                 </Link>
 
-                <div className="navbar-social">
+                {/*<div className="navbar-social">
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                         <img src={facebook} alt="Facebook" className="social-icon" />
                     </a>
@@ -45,7 +45,7 @@ function Navbar() {
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                         <img src={instagram} alt="Instagram" className="social-icon" />
                     </a>
-                </div>
+                </div>*/}
             </div>
         </nav>
     );

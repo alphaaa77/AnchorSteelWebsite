@@ -47,7 +47,7 @@ function GetAQuote() {
 
       setStatus({
         state: 'success',
-        msg: 'Thanks! Your quote request has been submitted.',
+        msg: 'Thanks! Your quote request has been submitted. Please allow 1-2 business days for a response.',
       });
       setForm({ full_name: '', company: '', email: '', delivered_by: '', message: '' });
     } catch (err) {

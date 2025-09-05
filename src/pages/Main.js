@@ -7,7 +7,8 @@ import cutandbent from '../assets/cutandbent.JPG';
 import mondaalogo from '../assets/partneredcomps/MondaaGroup.png';
 import frenchforest from '../assets/frenchforest/image1.jpg';
 import bunningstempe from '../assets/bunningstempe/image1.jpg';
-import placeholder from '../assets/placeholder.png';
+import deliverypic from '../assets/Delivery.jpg';
+import estimatingpic from '../assets/Estimating.jpg';
 import mesh from '../assets/mesh.jpg';
 import sslogo from '../assets/SS Logo.png';
 
@@ -137,12 +138,12 @@ and customer care.
                         <p>Standard and custom mesh solutions for foundations and slabs.</p>
                     </div>
                     <div className="service-card">
-                        <img src={placeholder} alt="Estimating & Scheduling" />
+                        <img src={estimatingpic} alt="Estimating & Scheduling" />
                         <h3>Estimating & Scheduling</h3>
                         <p>Accurate project estimates and reliable schedules to keep your build on track.</p>
                     </div>
                     <div className="service-card">
-                        <img src={placeholder} alt="Delivery Logistics" />
+                        <img src={deliverypic} alt="Delivery Logistics" />
                         <h3>Delivery Logistics</h3>
                         <p>Efficient delivery solutions to ensure your steel arrives when and where you need it.</p>
                     </div>
