@@ -6,6 +6,7 @@ import '../App.css';
 import placeholder from '../assets/placeholder.png';
 import rebar from '../components/productsheader.jpg';
 import mesh from '../assets/mesh.jpg';
+import accessories from '../assets/PlasticBarChair.jpg';
 
 function Products() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -78,7 +79,7 @@ function Products() {
           className={`vertical-card ${expandedIndex === 2 ? 'expanded' : ''}`}
           onClick={() => toggle(2)}
         >
-          <img src={placeholder} alt="Accessories" />
+          <img src={accessories} alt="Accessories" />
           <div className="card-text">
             <h2>Accessories</h2>
             <p>Various accessories</p>

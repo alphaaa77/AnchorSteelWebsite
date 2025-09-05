@@ -13,9 +13,9 @@ function About() {
 
             <section className="about-overview">
                 <p>
-Anchor Steel P/L was founded with one mission: to support Australia’s
-construction industry with reinforcing steel that is strong, compliant, and
-reliable.
+                    Anchor Steel P/L was founded with one mission: to support Australia’s
+                    construction industry with reinforcing steel that is strong, compliant, and
+                    reliable.
                 </p>
             </section>
 

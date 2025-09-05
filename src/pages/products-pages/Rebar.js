@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import '../../components/CSS files/Products.css';
 import '../../App.css';
 import placeholder from '../../assets/placeholder.png';
+import rebar from '../../components/productsheader.jpg';
 
 function Rebar() {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -36,7 +37,7 @@ function Rebar() {
             className={`vertical-card ${expandedIndex === i ? 'expanded' : ''}`}
             onClick={() => toggle(i)}
             >
-            <img src={placeholder} alt={it.title} />
+            <img src={rebar} alt={it.title} />
             <div className="card-text">
                 <h2>{it.title}</h2>
                 {it.sub && <p>{it.sub}</p>}

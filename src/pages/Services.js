@@ -4,8 +4,11 @@ import '../App.css';
 import placeholder from '../assets/placeholder.png';
 import arrowback from '../assets/arrow-back.png';
 import arrownext from '../assets/arrow-next.png';
-import deliverypic from '../assets/Delivery.jpg';
+import prefabimg from '../assets/PrefabImg.jpg';
+import mesh from '../assets/mesh.jpg';
+import deliverypic from '../assets/Delivery2.jpg';
 import estimatingpic from '../assets/Estimating.jpg';
+import barprocessing from '../assets/BarProcessing.jpg';
 
 function Services() {
   const [activeCard, setActiveCard] = useState(null);
@@ -21,27 +24,27 @@ function Services() {
     {
       title: 'Bar Processing',
       desc: 'Precision cutting, bending, bundling, and tagging.',
-      img: placeholder,
+      img: barprocessing,
       details: 'More info coming soon...',
     },
     {
-      title: 'Mesh Processing',
+      title: 'Mesh Supply',
       desc: 'Custom shapes and sizes to meet complex project requirements.',
-      img: placeholder,
+      img: mesh,
       details: 'More info coming soon...',
     },
     {
       title: 'Prefabrication',
       desc: 'Columns, footings, piers, and cages, factory-assembled for easy installation.',
-      img: placeholder,
+      img: prefabimg,
       details: 'More info coming soon...',
     },
-    {
+    /*{
       title: '3D BIM Modelling',
       desc: 'Visualise reinforcement before construction begins.',
       img: placeholder,
       details: 'More info coming soon...',
-    },
+    },*/
     {
       title: 'Estimating & Scheduling',
       desc: 'Accurate quotes and planning support.',

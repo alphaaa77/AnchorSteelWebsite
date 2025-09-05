@@ -11,42 +11,34 @@ function Accessories() {
   const items = [
     {
       title: 'Bar Chairs',
-      sub: 'Plastic & Concrete',
+      sub: 'Plastic & Concrete (More info soon)',
       price: '$XX per pack',
-      quantity: '200 pcs / pack',
-      desc: 'Maintain cover and position for bars and mesh.',
+      quantity: '----',
+      desc: '----',
       image: plasticchair
     },
     {
       title: 'Tie Wire',
-      sub: 'Galvanised / Black',
+      sub: 'Galvanised / Black (More info soon)',
       price: '$XX per roll',
-      quantity: '1.57mm • 1.25mm',
-      desc: 'Secure bars and mesh intersections quickly and reliably.',
+      quantity: '----',
+      desc: '----',
       image: placeholder
     },
     {
       title: 'Spacers',
-      sub: 'Varied sizes',
+      sub: 'Varied sizes (More info soon)',
       price: 'From $X each',
-      quantity: '20–75mm cover',
-      desc: 'Ensure correct spacing from formwork and surfaces.',
+      quantity: '----',
+      desc: '----',
       image: placeholder
     },
     {
       title: 'Caps & Safety',
-      sub: 'Mushroom caps',
+      sub: 'Mushroom caps (More info soon)',
       price: '$XX per bag',
-      quantity: '100 pcs / bag',
-      desc: 'Safety caps for exposed bar ends on site.',
-      image: placeholder
-    },
-    {
-      title: 'Some Accessory With No Photo',
-      sub: 'Default example',
-      price: '$X',
-      quantity: '—',
-      desc: 'This one uses the placeholder image.',
+      quantity: '----',
+      desc: '----',
       image: placeholder
     },
   ];
