@@ -33,7 +33,9 @@
 
 .animated-header {
   background-image: url('../anchorsteel.jpg');
-  background-position: 70% 40%;
+  background-position: 70% 35%;
+  background-size: cover;
+  transform: rotate(-0.5deg);
 }
 
 .animated-header .page-header-overlay h1 {

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../components/CSS files/Products.css';
 import '../App.css';
-import placeholder from '../assets/placeholder.png';
 import rebar from '../components/productsheader.jpg';
 import mesh from '../assets/mesh.jpg';
 import accessories from '../assets/PlasticBarChair.jpg';

@@ -11,14 +11,12 @@ function ProcRebar() {
     {
       title: 'L Bars',
       sub: 'Varied sizes',
-      price: '$XX per tonne / $XX per piece',
       quantity: 'Custom lengths, cut & bent to spec',
       desc: '90° bent bars, commonly used for footings, wall junctions and starter bars.'
     },
     {
       title: 'U Bars',
       sub: 'Varied sizes',
-      price: '$XX per tonne / $XX per piece',
       quantity: 'Custom lengths, cut & bent to spec',
       desc: 'U-shaped bent bars, typically used for edge reinforcement, beams and cages.'
     },
@@ -58,10 +56,6 @@ function ProcRebar() {
               {expandedIndex === i && (
                 <div className="card-details">
                   <dl className="kv">
-                    <div>
-                      <dt>Price</dt>
-                      <dd>{it.price || '—'}</dd>
-                    </div>
                     <div>
                       <dt>Quantity</dt>
                       <dd>{it.quantity || '—'}</dd>
