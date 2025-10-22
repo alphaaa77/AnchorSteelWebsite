@@ -22,10 +22,30 @@
   align-items: start;
 }
 
+.footer-logo {
+  display: flex;
+  align-items: center;   /* vertically align logos */
+  justify-content: center; /* center horizontally if needed */
+  gap: 20px;             /* space between logos */
+}
+
 .footer-logo img {
   max-width: 100px;
   height: auto;
 }
+
+.acrs-logo {
+  max-width: 80px;
+  height: auto;
+  margin-left: 20px;
+  vertical-align: -10px; /* negative moves it down, positive moves it up */
+}
+
+
+.acrs-logo:hover {
+  transform: scale(1.05); /* small hover effect for link */
+}
+
 
 /* Two-column layout */
 .footer-links.two-col {

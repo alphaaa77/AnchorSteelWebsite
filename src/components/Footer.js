@@ -1,7 +1,7 @@
 import React from 'react';
 import './CSS files/Footer.css';
 import anchorLogo from '../assets/anchorsteellogo.png';
-
+import acrslogo from '../assets/acrslogo.png';
 function Footer() {
   return (
     <footer className="simple-footer">
@@ -9,7 +9,15 @@ function Footer() {
         {/* Logo on top */}
         <div className="footer-logo">
           <img className="rotate-logo" src={anchorLogo} alt="Anchor Steel Logo" />
+            <a 
+              href="https://steelcertification.com/acrshome2021" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+            <img className="acrs-logo" src={acrslogo} alt="ACRS Certified Logo" />
+          </a>
         </div>
+
 
         {/* New grid: left = contact, right = two link columns */}
         <div className="footer-grid">
