@@ -59,6 +59,11 @@ function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/files/Anchor-Steel-Credit-Application.pdf" target="_blank" rel="noopener noreferrer">
+                  Credit Application Form
+                </a>
+              </li>
+              <li>
                 <a href="/files/Anchor-Steel-Terms-&-Conditions.pdf" target="_blank" rel="noopener noreferrer">
                   Terms &amp; Conditions
                 </a>

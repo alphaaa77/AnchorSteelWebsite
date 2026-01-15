@@ -169,15 +169,15 @@ function Contact() {
       </div>
 
       <div className="grid"> 
-        <div className="vertical-card"> 
+        {/*<div className="vertical-card"> 
             <div className="card-text"> 
                 <h3>JJ Zhong</h3> 
                 <h3>Email:</h3> 
                 <p>jjz@anchorsteel.com.au</p> 
                 <h3>Phone:</h3> <p>+61 0478 868686</p> 
-            </div> 
-        </div> 
-        <div className="vertical-card"> 
+            </div>
+        </div> */}
+        {/*<div className="vertical-card"> 
             <div className="card-text"> 
                 <h3>Rachel Hu</h3> 
                 <h3>Email:</h3> 
@@ -185,11 +185,12 @@ function Contact() {
                 <h3>Phone:</h3> 
                 <p>+61 411840777</p> 
             </div> 
-        </div> 
+        </div> */}
 
         <div className="vertical-card"> 
             <div className="card-text"> 
                 <h3>Mario Magallanes</h3> 
+                <h3>Position: Technical Manager</h3>
                 <h3>Email:</h3> 
                 <p>mariom@anchorsteel.com.au</p> 
                 <h3>Phone:</h3> 
