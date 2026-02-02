@@ -73,7 +73,7 @@ function Contact() {
         <div className="page-header-overlay">
           <h1>Contact Us!</h1>
           <h3>Address:</h3>
-          <p>46 Williamson Road, Ingleburn, 2565, Sydney, NSW</p>
+          <p>46 Williamson Road, Ingleburn 2565 Sydney NSW</p>
         </div>
       </header>
 
@@ -194,7 +194,18 @@ function Contact() {
                 <h3>Email:</h3> 
                 <p>mariom@anchorsteel.com.au</p> 
                 <h3>Phone:</h3> 
-                <p>+61 421451697</p> 
+                <p>+61 421 451 697</p> 
+            </div>
+        </div>
+
+        <div className="vertical-card"> 
+            <div className="card-text"> 
+                <h3>Candy Magallanes</h3> 
+                <h3>Position: Admin</h3>
+                <h3>Email:</h3> 
+                <p>candym@anchorsteel.com.au</p> 
+                <h3>Phone:</h3> 
+                <p>+61 468 514 474</p> 
             </div>
         </div>
       </div> 
