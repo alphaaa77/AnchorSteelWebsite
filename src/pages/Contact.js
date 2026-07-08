@@ -170,25 +170,6 @@ function Contact() {
 
       <div className="grid"> 
 
-        <div className="vertical-card"> 
-            <div className="card-text"> 
-                <h3>Technical Manager</h3>
-                <h3>Email:</h3> 
-                <p>mariom@anchorsteel.com.au</p> 
-                <h3>Phone:</h3> 
-                <p>+61 431 813 070</p> 
-            </div>
-        </div>
-
-        <div className="vertical-card"> 
-            <div className="card-text"> 
-                <h3>Admin</h3>
-                <h3>Email:</h3> 
-                <p>candym@anchorsteel.com.au</p> 
-                <h3>Phone:</h3> 
-                <p>+61 434 341 474</p> 
-            </div>
-        </div>
       </div> 
     </div>
   );
